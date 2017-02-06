@@ -1,0 +1,20 @@
+模仿网易新闻启动页广告DGAdLaunchView iOS源代码
+
+Purpose
+DGAdLaunchView 是一个模仿NetEase New在app Launch页面时的广告页面效果。
+
+依赖库：
+SDWebImage：管理图片缓存
+SnapKit：UI布局
+DACircularProgress：进度条
+Description
+
+DGAdLaunchView是口袋题库的启动广告页面。
+
+缓存处理逻辑： 以缓存中的图片为准，如果有图片的话使用；没有图片的时候（第一次打开app）直接进入rootvc，然后网络请求下载图片。
+
+实现思路：
+在一番google之后，发现实现启动页广告的效果，在appDelegate.m中，在window属性上增加一层view即可实现效果。具体效果如果网易新闻一样。而在广告页面也要保持launch页面的slogan标识的时候，只有我们将其view背景设置成相同即可。
+
+本代码由好库网收集整理，版权归原作者所有，更多源代码请访问：
+http://www.okbase.net
