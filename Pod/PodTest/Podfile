@@ -1,0 +1,10 @@
+platform :ios, ‘8.4’
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+
+def pods
+  pod 'AFNetworking', '~> 2.6'
+  pod 'ORStackView', '~> 3.0'
+end
+target 'PodTest’ do
+  pods
+end
