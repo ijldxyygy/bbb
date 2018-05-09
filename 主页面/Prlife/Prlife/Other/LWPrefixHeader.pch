@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//
+//  Created by W.LW on 12-3-7.
+//  Copyright (c) 2012年 W.LW All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+#import "UIBarButtonItem+Item.h"
+#import "Const.h"
+#import "UIButton+Common.h"
+#import "UILabel+Common.h"
+
+//获取window
+#define LWKeyWindow [UIApplication sharedApplication].keyWindow
+//获取屏幕 宽度、高度
+#define SCREEN_FRAME ([UIScreen mainScreen].applicationFrame)
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+/**屏幕尺寸设置**/
+#define STATUSBARHEIGHT 20  //状态栏高度
+#define NAVBARHEIGHT    44 //屏幕宽度
+#define MENU_OFFSET  150  //首页右滑菜单的右边距
+
+
+#define SCREENRATE [[UIScreen mainScreen] bounds].size.width/320.0f //和iphone5的比率
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define LWLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define LWLog(...)
+
+#endif
+
+#endif
