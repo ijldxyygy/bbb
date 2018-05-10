@@ -1,0 +1,215 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red14\green14\blue255;\red92\green38\blue153;
+\red196\green26\blue22;\red170\green13\blue145;\red46\green13\blue110;\red28\green0\blue207;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11120\viewh13640\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs28 \cf2 \CocoaLigature0 \'b8\'c5\'c4\'ee\'a3\'ba
+\f1 NSString
+\f0 \'ca\'c7\'b2\'bb\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'cb\'f9\'d3\'d0\'cb\'fc\'cb\'f9\'d3\'d0\'b2\'fa\'c9\'fa\'c6\'e4\'cb\'fb\'d7\'d6\'b7\'fb\'b4\'ae\'b7\'bd\'b7\'a8\'b6\'bc\'ca\'c7\'c9\'fa\'b3\'c9\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b6\'f8\'b2\'bb\'bb\'e1\'b8\'c4\'b1\'e4\'d4\'ad\'c0\'b4\'d7\'d6\'b7\'fb\'b4\'ae\
+
+\f1 //
+\f0 \'d7\'d6\'b7\'fb\'b4\'ae\'d3\'eb
+\f1 URL\cf0 \
+\cf2 //URL: 
+\f0 \'b8\'c5\'c4\'ee
+\f1 :Uniform Resource Locator 
+\f0 \'cd\'b3\'d2\'bb\'d7\'ca\'d4\'b4\'b6\'a8\'ce\'bb\'b7\'fb
+\f1 \cf0 \
+\cf2 //URL:
+\f0 \'b8\'f1\'ca\'bd
+\f1  
+\f0 \'d0\'ad\'d2\'e9\'cd\'b7
+\f1 ://
+\f0 \'d6\'f7\'bb\'fa\'c3\'fb\'b3\'c6
+\f1 /
+\f0 \'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6
+\f1 \cf0 \
+\cf2 //{\field{\*\fldinst{HYPERLINK "http://www.itcast.cn:8080/images/beauty.png"}}{\fldrslt \cf3 http://www.itcast.cn:8080/images/beauty.png}}\cf0 \
+\cf2 //404 
+\f0 \'c3\'bb\'d5\'d2\'b5\'bd
+\f1 \cf0 \
+\cf2 //{\field{\*\fldinst{HYPERLINK "file:///Users/apple/Desktop/test.txt"}}{\fldrslt \cf3 file:///Users/apple/Desktop/test.txt}}\cf0 \
+\cf2 //
+\f0 \'d3\'c9\'d3\'da
+\f1 file
+\f0 \'be\'cd\'ca\'c7\'d4\'da\'b1\'be\'bb\'fa\'c9\'cf\'b2\'e9\'d5\'d2\'a3\'ac\'cb\'f9\'d3\'d0\'c3\'bb\'d3\'d0\'d6\'f7\'bb\'fa\'c3\'fb\'b3\'c6
+\f1 \cf0 \
+\cf2 //ftp://\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf0         \cf4 NSString\cf0  *str = \cf5 @"
+\f0 \'bd\'f1\'cc\'ec\'ba\'c3\'c0\'e4\'b0\'a1\'a3\'a1\'d2\'aa\'b6\'e0\'b4\'a9\'d2\'c2\'b7\'fe\'a3\'a1
+\f1 \'ae"\cf0 ;\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2   
+\f0 \'b0\'d1
+\f1 UTF8
+\f0 \'b1\'e0\'c2\'eb\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b1\'e0\'c2\'eb\'b3\'c9\'ce\'aa
+\f1 URL
+\f0 \'d6\'d0\'bf\'c9\'d3\'c3\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 \cf0 \
+\cf2 //      NSString *str3 =  [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];\cf0 \
+\cf2 ////    
+\f0 \'b0\'d1
+\f1 URL
+\f0 \'d6\'d0\'bf\'c9\'d3\'c3\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b1\'e0\'c2\'eb\'b3\'c9\'ce\'aa
+\f1 UTF8
+\f0 \'b1\'e0\'c2\'eb\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 \cf0 \
+\cf2 //      str3 =[str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];\cf0 \
+\cf2 //      NSLog(@"%@",str3);\
+\
+//  
+\f0 \'b0\'d1\'d7\'d6\'b7\'fb\'b4\'ae\'d0\'b4\'c8\'eb\'ce\'c4\'bc\'fe
+\f1 \cf0 \
+    \cf4 NSString\cf0  *str = \cf5 @"
+\f0 \'bd\'f1\'cc\'ec\'ba\'c3\'c0\'e4\'b0\'a1\'a3\'a1
+\f1 "\cf0 ;\
+    \cf4 NSString\cf0  *path = \cf5 @"/Users/apple/Desktop/test.txt"\cf0 ;\
+    \
+    \cf4 NSError\cf0  *error = \cf6 nil\cf0 ;\
+    \cf6 BOOL\cf0  isSuccess = [str \cf7 writeToFile\cf0 :path \cf7 atomically\cf0 :\cf6 YES\cf0  \cf7 encoding\cf0 :\cf7 NSUTF8StringEncoding\cf0  \cf7 error\cf0 :(&error)];\
+    \
+    \cf2 //    if (isSuccess) \{\cf0 \
+    \cf2 //        NSLog(@"
+\f0 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f1 ");\cf0 \
+    \cf2 //    \}else\{\cf0 \
+    \cf2 //        NSLog(@"%@",error.userInfo);\cf0 \
+    \cf2 //    \}\cf0 \
+    \
+    \cf2 //    if (error) \{\cf0 \
+    \cf2 //         NSLog(@"%@",error.userInfo);\cf0 \
+    \cf2 //    \}else\{\cf0 \
+    \cf2 //        NSLog(@"
+\f0 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f1 ");\cf0 \
+    \cf2 //    \}\cf0 \
+    \cf2 //    
+\f0 \'b6\'c1\'c8\'a1\'ce\'c4\'bc\'fe
+\f1 \cf0 \
+    \cf4 NSString\cf0  *string  = [\cf4 NSString\cf0  \cf7 stringWithContentsOfFile\cf0 :path \cf7 encoding\cf0 :\cf7 NSUTF8StringEncoding\cf0  \cf7 error\cf0 :&error];\
+    \cf6 if\cf0  (error) \{\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,error);\
+    \}\cf6 else\cf0 \{\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,string);\
+    \}\
+\
+\
+\cf2 NSMutableString 
+\f0 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'a3\'ac\'cb\'fc\'ca\'c7
+\f1 NSString
+\f0 \'d7\'d3\'c0\'e0
+\f1 \
+ 
+\f0 \'d4\'f6\'b8\'c4\'c9\'be\'b5\'c4\'b2\'d9\'d7\'f7
+\f1 \
+ \
+ 
+\f0 \'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'d0\'e8\'d2\'aa\'be\'ad\'b3\'a3\'d0\'de\'b8\'c4\'c6\'e4\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd\'a3\'ac\'c4\'c7\'c3\'b4\'be\'cd\'ca\'b9\'d3\'c3
+\f1 NSMutableString\
+\
+\
+ NSMutableString *strM  = [NSMutableString string];\cf0 \
+\cf2 //        Capacity 
+\f0 \'b1\'ed\'ca\'be\'c8\'dd\'c1\'bf\'a3\'ac\'bf\'c9\'d2\'d4\'c8\'dd\'c4\'c9\'b6\'e0\'c9\'d9\'d7\'d6\'b7\'fb\'a3\'ac\'c8\'e7\'b9\'fb\'c4\'e3\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'ac\'d5\'e2\'b8\'f6\'b4\'e6\'b4\'a2\'bf\'d5\'bc\'e4\'cb\'fc\'c0\'a9\'d5\'b9\'cb\'fc
+\f1 \cf0 \
+        \cf4 NSMutableString\cf0  *strm  =  [\cf4 NSMutableString\cf0  \cf7 stringWithCapacity\cf0 :\cf8 140\cf0 ];\
+        \cf6 for\cf0 (\cf6 int\cf0  i = \cf8 0\cf0 ;i < \cf8 20\cf0 ; i++)\{\
+            [strm \cf7 appendString\cf0 :\cf5 @" itcast"\cf0 ];\
+        \}\
+ \cf4 NSRange\cf0  range = \{\cf8 0\cf0 ,\cf8 1\cf0 \};\
+        [strm \cf7 deleteCharactersInRange\cf0 :range];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strm);\
+        \cf4 NSRange\cf0  r = [strm \cf7 rangeOfString\cf0 :\cf5 @"itcast"\cf0 ];\
+\cf2 //      
+\f0 \'cc\'e6\'bb\'bb\'c4\'b3\'b8\'f6\'c7\'f8\'d3\'f2\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 \cf0 \
+        [strm \cf7 replaceCharactersInRange\cf0 :r \cf7 withString\cf0 :\cf5 @"www"\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strm);\
+\cf2 //\cf0 \
+        \cf4 NSRange\cf0  range1 = \{\cf8 0\cf0 ,strm.\cf4 length\cf0 \};\
+\cf2 //      NSRange range1 = \{0,strm.length+1\};//
+\f0 \'b4\'cb\'b4\'a6\'bb\'e1\'d3\'d0\'d2\'bb\'b8\'f6\'d4\'bd\'bd\'e7\'b5\'c4\'b4\'ed\'ce\'f3
+\f1 \cf0 \
+\cf2 //      
+\f0 \'d7\'a2\'d2\'e2\'ca\'b9\'d3\'c3
+\f1 range
+\f0 \'ca\'b1\'ba\'f2\'b2\'bb\'d2\'aa\'b3\'ac\'b9\'fd\'d7\'d6\'b7\'fb\'b5\'c4\'b3\'a4\'b6\'c8
+\f1 \cf0 \
+        [strm \cf7 replaceOccurrencesOfString\cf0 :\cf5 @"itcast"\cf0  \cf7 withString\cf0 :\cf5 @"
+\f0 \'b4\'ab\'d6\'c7\'b2\'a5\'bf\'cd
+\f1 "\cf0  \cf7 options\cf0 :\cf7 NSLiteralSearch\cf0  \cf7 range\cf0 :range1];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strm);\
+        \
+\cf2 //      
+\f0 \'d4\'da\'c4\'b3\'b8\'f6\'ce\'bb\'d6\'c3\'b2\'e5\'c8\'eb\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 \cf0 \
+        [strm \cf7 insertString\cf0 :\cf5 @"."\cf0  \cf7 atIndex\cf0 :\cf8 3\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strm);\
+        \
+        strm.\cf7 string\cf0  = \cf5 @"www.itcast.cn"\cf0 ;\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strm);\
+\cf2 //\cf0 \
+        \
+\cf2 //        NSString *str = @"abc";\cf0 \
+\cf2 //      
+\f0 \'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b2\'bb\'c4\'dc\'ca\'b9\'d3\'c3\'d7\'d6\'c3\'e6\'c1\'bf\'b5\'c4\'b7\'bd\'ca\'bd\'b8\'b3\'d6\'b5\'a3\'ac\'d7\'d6\'c3\'e6\'c1\'bf\'b6\'a8\'d2\'e5\'b5\'c4\'ca\'c7\'d2\'bb\'b8\'f6\'b2\'bb\'bf\'c9\'d2\'d4\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 \cf0 \
+\cf2 //        NSMutableString *strMM = @"abc";\cf0 \
+         \cf4 NSMutableString\cf0  *strMM = [\cf4 NSMutableString\cf0  \cf7 string\cf0 ];\
+         strMM.\cf7 string\cf0  = \cf5 @"abc"\cf0 ;\
+\cf2 //         NSString *string10  =  strMM.string;\cf0 \
+         [strMM \cf7 insertString\cf0 :\cf5 @"d"\cf0  \cf7 atIndex\cf0 :\cf8 1\cf0 ];\
+         \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,strMM);\
+    \}\
+\
+\
+\
+\
+\cf2  NSArray:
+\f0 \'b2\'bb\'bf\'c9\'d2\'d4\'b1\'e4\
+\
+
+\f1 // 
+\f0 \'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'ca\'fd\'d7\'e9
+\f1 \cf0 \
+    \cf4 NSArray\cf0  *array = \cf8 @[\cf5 @"a"\cf0 ,\cf5 @"b"\cf0 ,\cf5 @"c"\cf0 ,\cf5 @"d"\cf8 ]\cf0 ;\
+   \
+\cf2 //  
+\f0 \'d0\'b4\'c8\'eb\'ce\'c4\'bc\'fe
+\f1 \cf0 \
+\cf2 //    NSString *path = @"/Users/apple/Desktop/test.plist";\cf0 \
+\cf2 //    BOOL isSuccess = [array writeToFile:path atomically:YES];\cf0 \
+\cf2 //    if (isSuccess) \{\cf0 \
+\cf2 //        NSLog(@"
+\f0 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f1 ");\cf0 \
+\cf2 //    \}\cf0 \
+\cf2 //    \cf0 \
+\cf2 ////  
+\f0 \'b4\'d3\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1\'c4\'da\'c8\'dd
+\f1 \cf0 \
+\cf2 //    array = [NSArray arrayWithContentsOfFile:path];\cf0 \
+\cf2 //    NSLog(@"%@",array);\cf0 \
+\cf2 //    \cf0 \
+\cf2 //  URL 
+\f0 \'d0\'b4\'c8\'eb
+\f1 \cf0 \
+    \cf4 NSURL\cf0  *url = [\cf4 NSURL\cf0  \cf7 URLWithString\cf0 :\cf5 @"file:///Users/apple/Desktop/test.plist"\cf0 ];\
+    \cf6 BOOL\cf0  isSuccess = [array \cf7 writeToURL\cf0 :url \cf7 atomically\cf0 :\cf6 YES\cf0 ];\
+    \cf6 if\cf0  (isSuccess) \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f0 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f1 "\cf0 );\
+    \}\
+\cf2 //  URL 
+\f0 \'b6\'c1
+\f1 \cf0 \
+    array = [\cf4 NSArray\cf0  \cf7 arrayWithContentsOfURL\cf0 :url];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,array);\
+\
+}

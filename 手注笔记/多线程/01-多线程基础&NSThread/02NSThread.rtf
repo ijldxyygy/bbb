@@ -1,0 +1,171 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red170\green13\blue145;\red46\green13\blue110;
+\red196\green26\blue22;\red92\green38\blue153;\red100\green56\blue32;\red28\green0\blue207;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs28 \cf2 \CocoaLigature0 \
+// \'93
+\f1 \'d2\'fe\'ca\'bd
+\f0 \'94
+\f1 \'b4\'b4\'bd\'a8\'cf\'df\'b3\'cc\'b7\'bd\'ca\'bd
+\f0 \cf0 \
+    [\cf3 self\cf0  \cf4 performSelectorInBackground\cf0 :\cf3 @selector\cf0 (run:) \cf4 withObject\cf0 :\cf5 @"cz"\cf0 ];\
+\
+\cf2 // 
+\f1 \'b4\'b4\'bd\'a8\'cf\'df\'b3\'cc\'b7\'bd\'ca\'bd
+\f0 2\cf0 \
+- (\cf3 void\cf0 )test2\
+\{\
+    \cf4 NSLog\cf0 (\cf5 @"---%@"\cf0 , [\cf6 NSThread\cf0  \cf4 currentThread\cf0 ]);\
+    [\cf6 NSThread\cf0  \cf4 detachNewThreadSelector\cf0 :\cf3 @selector\cf0 (run:) \cf4 toTarget\cf0 :\cf3 self\cf0  \cf4 withObject\cf0 :\cf5 @"hello"\cf0 ];\
+    \
+    \cf4 NSLog\cf0 (\cf5 @"test2 --- %@"\cf0 , [\cf6 NSThread\cf0  \cf4 currentThread\cf0 ]);\
+\
+\}\
+\
+\cf2 // 
+\f1 \'b4\'b4\'bd\'a8\'cf\'df\'b3\'cc\'b7\'bd\'ca\'bd
+\f0 1\cf0 \
+- (\cf3 void\cf0 )test1\
+\{\
+    \cf2 // 
+\f1 \'ca\'b5\'c0\'fd\'bb\'af\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'b6\'d4\'cf\'f1
+\f0 \cf0 \
+    \cf6 NSThread\cf0  *thread = [[\cf6 NSThread\cf0  \cf4 alloc\cf0 ] \cf4 initWithTarget\cf0 :\cf3 self\cf0  \cf4 selector\cf0 :\cf3 @selector\cf0 (run) \cf4 object\cf0 :\cf3 nil\cf0 ];\
+    \
+    \cf2 // 
+\f1 \'c8\'c3\'cf\'df\'b3\'cc\'bf\'aa\'ca\'bc\'b9\'a4\'d7\'f7\'a3\'ac\'c6\'f4\'b6\'af\'cf\'df\'b3\'cc
+\f0 , 
+\f1 \'d4\'da\'d0\'c2\'bf\'aa\'b5\'c4\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0
+\f0 run
+\f1 \'b7\'bd\'b7\'a8
+\f0 \cf0 \
+    [thread \cf4 start\cf0 ];\
+\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 #pragma mark - 
+\f1 \'cf\'df\'b3\'cc\'b5\'c4\'ca\'f4\'d0\'d4
+\f0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf0 - (\cf3 void\cf0 )test4\
+\{\
+    \cf6 NSThread\cf0  *threadA = [[\cf6 NSThread\cf0  \cf4 alloc\cf0 ] \cf4 initWithTarget\cf0 :\cf3 self\cf0  \cf4 selector\cf0 :\cf3 @selector\cf0 (run:) \cf4 object\cf0 :\cf5 @"hello"\cf0 ];\
+    \
+    threadA.\cf6 name\cf0  = \cf5 @"thraed A"\cf0 ;\
+    \
+    \cf2 // 
+\f1 \'cf\'df\'b3\'cc\'d3\'c5\'cf\'c8\'bc\'b6
+\f0 \cf0 \
+    \cf2 // 
+\f1 \'ca\'c7\'d2\'bb\'b8\'f6\'b8\'a1\'b5\'e3\'ca\'fd\'a3\'ac
+\f0 0.0
+\f1 \'a1\'ab
+\f0 1.0
+\f1 \'a1\'a3
+\f0  
+\f1 \'c4\'ac\'c8\'cf\'d6\'b5
+\f0  0.5\cf0 \
+    \cf2 // 
+\f1 \'bf\'aa\'b7\'a2\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'d2\'bb\'b0\'e3\'b2\'bb\'c8\'a5\'d0\'de\'b8\'c4\'d3\'c5\'cf\'c8\'bc\'b6\'b5\'c4\'d6\'b5\'a1\'a3
+\f0 \cf0 \
+    \cf2 // 
+\f1 \'d3\'c5\'cf\'c8\'bc\'b6\'a3\'ac\'b1\'d8\'d0\'eb\'b5\'f7\'d3\'c3\'ba\'dc\'b6\'e0\'b4\'ce\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'b2\'c5\'c4\'dc\'cc\'e5\'cf\'d6\'b3\'f6\'c0\'b4\'a1\'a3
+\f0 \cf0 \
+    threadA.\cf6 threadPriority\cf0  = \cf8 0.1\cf0 ;\
+    \
+    \cf2 // 
+\f1 \'bf\'aa\'ca\'bc\'b9\'a4\'d7\'f7
+\f0 \cf0 \
+    [threadA \cf4 start\cf0 ];\
+    \
+    \
+    \cf6 NSThread\cf0  *threadB = [[\cf6 NSThread\cf0  \cf4 alloc\cf0 ] \cf4 initWithTarget\cf0 :\cf3 self\cf0  \cf4 selector\cf0 :\cf3 @selector\cf0 (run:) \cf4 object\cf0 :\cf5 @"hello"\cf0 ];\
+    \
+    threadB.\cf6 name\cf0  = \cf5 @"thraed B"\cf0 ;\
+    \
+    \cf2 // 
+\f1 \'cf\'df\'b3\'cc\'d3\'c5\'cf\'c8\'bc\'b6
+\f0 \cf0 \
+    \cf2 // 
+\f1 \'ca\'c7\'d2\'bb\'b8\'f6\'b8\'a1\'b5\'e3\'ca\'fd\'a3\'ac
+\f0 0.0
+\f1 \'a1\'ab
+\f0 1.0
+\f1 \'a1\'a3
+\f0  
+\f1 \'c4\'ac\'c8\'cf\'d6\'b5
+\f0  0.5\cf0 \
+    threadB.\cf6 threadPriority\cf0  = \cf8 1.0\cf0 ;\
+    \
+    \cf2 // 
+\f1 \'bf\'aa\'ca\'bc\'b9\'a4\'d7\'f7
+\f0 \cf0 \
+    [threadB \cf4 start\cf0 ];\
+\}\
+\
+\cf2 // 1. 
+\f1 \'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc
+\f0 \cf0 \
+    \cf6 NSThread\cf0  *thread = [[\cf6 NSThread\cf0  \cf4 alloc\cf0 ] \cf4 initWithTarget\cf0 :\cf3 self\cf0  \cf4 selector\cf0 :\cf3 @selector\cf0 (run) \cf4 object\cf0 :\cf3 nil\cf0 ];\
+    \
+    \cf2 // 2. 
+\f1 \'b7\'c5\'b5\'bd\'bf\'c9\'b5\'f7\'b6\'c8\'cf\'df\'b3\'cc\'b3\'d8\'a3\'ac\'b5\'c8\'b4\'fd\'b1\'bb\'b5\'f7\'b6\'c8\'a1\'a3
+\f0  
+\f1 \'d5\'e2\'ca\'b1\'ba\'f2\'ca\'c7\'be\'cd\'d0\'f7\'d7\'b4\'cc\'ac
+\f0 \cf0 \
+    [thread \cf4 start\cf0 ];\
+\}\
+\
+- (\cf3 void\cf0 )run\
+\{\
+    \cf4 NSLog\cf0 (\cf5 @"%s"\cf0 , __func__);\
+    \
+    \cf2 // 
+\f1 \'b8\'d5\'bd\'f8\'c0\'b4\'be\'cd\'cb\'af\'bb\'e1\'a3\'ac
+\f0  
+\f1 \'cb\'af
+\f0 2
+\f1 \'c3\'eb
+\f0 \cf0 \
+\cf2 //    [NSThread sleepForTimeInterval:5.0];\cf0 \
+    \
+    \cf2 // 
+\f1 \'cb\'af\'b5\'bd\'d6\'b8\'b6\'a8\'b5\'c4\'ca\'b1\'bc\'e4\'b5\'e3
+\f0 \cf0 \
+\cf2 //    [NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:5.0]];\cf0 \
+    \
+    \cf3 for\cf0  (\cf3 int\cf0  i = \cf8 0\cf0 ; i < \cf8 20\cf0 ; i++) \{\
+        \
+        \cf2 // 
+\f1 \'c2\'fa\'d7\'e3\'c4\'b3\'d2\'bb\'b8\'f6\'cc\'f5\'bc\'fe\'d2\'d4\'ba\'f3\'a3\'ac\'d7\'e8\'c8\'fb\'cf\'df\'b3\'cc\'b5\'c4\'d6\'b4\'d0\'d0\'a1\'a3
+\f0  
+\f1 \'d2\'b2\'be\'cd\'ca\'c7\'c8\'c3\'cf\'df\'b3\'cc\'d0\'dd\'cf\'a2\'d2\'bb\'bb\'e1
+\f0 \cf0 \
+        \cf3 if\cf0  (i == \cf8 10\cf0 ) \{\
+            [\cf6 NSThread\cf0  \cf4 sleepForTimeInterval\cf0 :\cf8 3.0\cf0 ];\
+        \}\
+        \
+        \cf2 // 
+\f1 \'d2\'bb\'b5\'a9\'b4\'ef\'b5\'bd\'c4\'b3\'d2\'bb\'b8\'f6\'cc\'f5\'bc\'fe\'a3\'ac\'be\'cd\'c7\'bf\'d6\'c6\'d6\'d5\'d6\'b9\'cf\'df\'b3\'cc\'b5\'c4\'d6\'b4\'d0\'d0
+\f0 \cf0 \
+        \cf3 if\cf0  (i == \cf8 15\cf0 ) \{\
+            \cf2 // 
+\f1 \'d2\'bb\'b5\'a9\'c7\'bf\'d6\'c6\'d6\'d5\'d6\'b9\'a3\'ac\'be\'cd\'d4\'da\'b2\'bb\'c4\'dc\'d6\'d8\'d0\'c2\'c6\'f4\'b6\'af
+\f0 \cf0 \
+            \cf2 // 
+\f1 \'d2\'bb\'b5\'a9\'c7\'bf\'d6\'c6\'d6\'d5\'d6\'b9\'a3\'ac\'ba\'f3\'c3\'e6\'b5\'c4\'b4\'fa\'c2\'eb\'b6\'bc\'b2\'bb\'bb\'e1\'d6\'b4\'d0\'d0
+\f0 \cf0 \
+            [\cf6 NSThread\cf0  \cf4 exit\cf0 ];\
+        \}\
+        \
+        \cf4 NSLog\cf0 (\cf5 @"%@--- %d"\cf0 , [\cf6 NSThread\cf0  \cf4 currentThread\cf0 ], i);\
+    \}\
+    \
+    \cf4 NSLog\cf0 (\cf5 @"
+\f1 \cf5 \'cf\'df\'b3\'cc\'bd\'e1\'ca\'f8
+\f0 \cf5 "\cf0 );\
+}

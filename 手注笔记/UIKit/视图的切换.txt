@@ -1,0 +1,23 @@
+视图的切换
+1.UITabBarController
+2.UINavigationController
+3.模态窗口
+4.模式对话窗体
+iOS三种视图切换的原理各不相同：
+
+UITabBarController：以平行的方式管理视图，各个视图之间往往关系并不大，每个加入到UITabBarController的视图都会进行初始化即使当前不显示在界面上，相对比较占用内存。
+
+UINavigationController：以栈的方式管理视图，各个视图的切换就是压栈和出栈操作，出栈后的视图会立即销毁。
+
+
+
+
+
+
+UIModalController：以模态窗口的形式管理视图，当前视图关闭前其他视图上的内容无法操作。
+
+UITabBarController是Apple专门为了利用页签切换视图而设计的，在这个视图控制器中有一个UITabBar控件，用户通过点击tabBar进行视图切换。
+我们知道在UIViewController内部有一个视图，一旦创建了UIViewController之后默认就会显示这个视图，但是UITabBarController本身并不会显示任何视图，如果要显示视图则必须设置其viewControllers属性（它默认显示viewControllers[0]）。这个属性是一个数组，它维护了所有UITabBarController的子视图。为了尽可能减少视图之间的耦合，所有的UITabBarController的子视图的相关标题、图标等信息均由子视图自己控制，UITabBarController仅仅作为一个容器存在。
+
+
+presentViewController: svc(控制器实例变量) animated:YES completion:^

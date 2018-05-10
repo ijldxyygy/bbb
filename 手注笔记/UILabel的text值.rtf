@@ -1,0 +1,270 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STXihei;\f1\fnil\fcharset0 MicrosoftYaHei;\f2\froman\fcharset0 Times-Roman;
+\f3\fnil\fcharset134 STHeitiSC-Light;\f4\fswiss\fcharset0 ArialMT;\f5\fnil\fcharset0 Menlo-Regular;
+\f6\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red31\green31\blue31;\red117\green117\blue117;\red230\green60\blue83;
+\red38\green38\blue38;\red92\green38\blue153;\red46\green13\blue110;\red170\green12\blue145;\red63\green110\blue116;
+\red0\green0\blue0;\red249\green249\blue249;\red15\green114\blue1;\red37\green127\blue159;\red0\green0\blue255;
+\red106\green0\blue67;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+- (void)viewDidLoad\
+\{\
+\uc0\u160 \u160 \u160 \u160 [super viewDidLoad];\
+\uc0\u160 \u160 \u160 \u160 // Do any additional setup after loading the view.\
+\uc0\u160 \u160 \u160 \u160 self.view.backgroundColor=[UIColor yellowColor];\
+\uc0\u160 \u160 \u160 \u160 \
+\uc0\u160 \u160 \u160 \u160 self.lable.textColor=[UIColor blueColor];\
+\uc0\u160 \u160 \u160 \u160 self.lable.backgroundColor=[UIColor redColor];\
+\uc0\u160 \u160 \u160 \u160 self.lable.font=[UIFont boldSystemFontOfSize:16];\
+\uc0\u160 \u160 \u160 \u160 self.lable.text=@"\u160 \u160 ";\
+\uc0\u160 \u160 \u160 \u160 [self.view addSubview:self.lable];\
+\uc0\u160 \u160 \u160 \u160 [self performSelector:@selector(changeText) withObject:nil afterDelay:2.0f];\
+\uc0\u160 \u160 \u160 \u160 \
+\}\
+- (void) changeText\{\
+\uc0\u160 \u160 \u160 \u160 int i=0;\
+\uc0\u160 \u160 \u160 \u160 while (i<1000000000)\{\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 if (i%40000000==0)\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \{\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 [NSThread detachNewThreadSelector:@selector(changeValue:) toTarget:self withObject:[NSString stringWithFormat:@"%d", i]];\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 NSLog(@"%d",i);\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \}\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 i++;\
+\uc0\u160 \u160 \u160 \u160 \}\
+\}\
+-(void)changeValue:(id)sender\
+\{\
+\uc0\u160 \u160 \u160 \u160 NSString *string = (NSString*)sender;\
+\uc0\u160 \u160 \u160 \u160 _lable.text=string;\
+\uc0\u160 \u160 \u160 \u160 NSLog(@"%@",_lable.text);\
+\uc0\u160 \u160  \
+\uc0\u160 \u160 \u160 \u160 \
+\}\
+\'ce\'d2\'d2\'d4\'ce\'aa\'bb\'d8\'b5\'bd\'d6\'f7\'cf\'df\'b3\'cc\'cb\'a2\'d0\'c2UI\'a3\'ac\'bd\'e1\'b9\'fb\'b2\'bb\'ca\'c7~~~~\'d4\'da\'b7\'d6\'cf\'df\'b3\'cc\'d6\'d0\'b8\'f8UI\'b8\'b3\'d6\'b5\
+\'d4\'b4\'b4\'fa\'c2\'eb\'c8\'e7\'cf\'c2\'a3\'ac\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6\'c2\'a5\'d6\'f7\'cf\'eb\'d2\'aa\'b5\'c4\'b9\'a6\'c4\'dc\'a3\'ac\'b5\'ab\'ca\'c7\'c9\'cf\'c3\'e6\'b5\'c4\'b4\'fa\'c2\'eb\'ca\'b5\'cf\'d6\'c1\'cb\
+\
+- (void)viewDidLoad\
+\{\
+\uc0\u160 \u160 \u160 \u160 [super viewDidLoad];\
+\uc0\u160 \u160 \u160 \u160 // Do any additional setup after loading the view.\
+\uc0\u160 \u160 \u160 \u160 self.view.backgroundColor=[UIColor yellowColor];\
+\uc0\u160 \u160 \u160 \u160 \
+\uc0\u160 \u160 \u160 \u160 self.lable.textColor=[UIColor blueColor];\
+\uc0\u160 \u160 \u160 \u160 self.lable.backgroundColor=[UIColor redColor];\
+\uc0\u160 \u160 \u160 \u160 self.lable.font=[UIFont boldSystemFontOfSize:16];\
+\uc0\u160 \u160 \u160 \u160 self.lable.text=@"\u160 \u160 ";\
+\uc0\u160 \u160 \u160 \u160 [self.view addSubview:self.lable];\
+\uc0\u160 \u160 \u160 \u160 [self performSelector:@selector(changeText) withObject:nil afterDelay:2.0f];\
+\uc0\u160 \u160 \u160 \u160 \
+\}\
+- (void) changeText\{\
+\uc0\u160 \u160 \u160 \u160 int i=0;\
+\uc0\u160 \u160 \u160 \u160 while (i<1000000000)\{\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 if (i%40000000==0)\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \{\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 [NSThread detachNewThreadSelector:@selector(changeValue:) toTarget:self withObject:[NSString stringWithFormat:@"%d", i]];\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 NSLog(@"%d",i);\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 \}\
+\uc0\u160 \u160 \u160 \u160 \u160 \u160 \u160 \u160 i++;\
+\uc0\u160 \u160 \u160 \u160 \}\
+\}\
+-(void)changeValue:(id)sender\
+\{\
+\uc0\u160 \u160 \u160 \u160 NSString *string = (NSString*)sender;\
+\uc0\u160 \u160 \u160 \u160 [self performSelectorOnMainThread:@selector(refreshUI:) withObject:string waitUntilDone:NO];\
+\uc0\u160 \u160 \u160 \u160 \
+\}\
+-(void)refreshUI:(NSString*)aString\
+\{\
+\uc0\u160 \u160 \u160 \u160 _lable.text=aString;\
+\uc0\u160 \u160 \u160 \u160 NSLog(@"%@",_lable.text);\
+\}\
+\
+\
+\pard\pardeftab720\sl760
+
+\f1\fs64 \cf2 \expnd0\expndtw0\kerning0
+IOS UILabel\uc0\u28155 \u21152 \u25163 \u21183 \u65292 \u22686 \u21152 \u28857 \u20987 \u21151 \u33021 \
+\pard\pardeftab720\sl560
+
+\f2\fs24 \cf3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360
+{\field{\*\fldinst{HYPERLINK "javascript:void(0);"}}{\fldrslt 
+\f1 \cf4 \expnd0\expndtw0\kerning0
+0\uc0\u26465 \u35780 \u35770 }}
+\f1 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa360\qc
+
+\fs36 \cf5 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl480\sa360
+
+\f3\fs26 \cf5 \expnd0\expndtw0\kerning0
+\'ce\'aa
+\f4 UILabel
+\f3 \'d4\'f6\'bc\'d3\'b5\'e3\'bb\'f7\'b4\'a5\'b7\'a2\'ca\'c2\'bc\'fe\'a1\'a3
+\f4  \'a0 \'a0\'a0
+\f1\fs36 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400\sa360
+
+\f5\fs22 \cf6 \expnd0\expndtw0\kerning0
+UITapGestureRecognizer\cf5 \expnd0\expndtw0\kerning0
+ *tapRecognizerWeibo=[[\cf6 \expnd0\expndtw0\kerning0
+UITapGestureRecognizer\cf5 \expnd0\expndtw0\kerning0
+ \cf7 \expnd0\expndtw0\kerning0
+alloc\cf5 \expnd0\expndtw0\kerning0
+] \cf7 \expnd0\expndtw0\kerning0
+initWithTarget\cf5 \expnd0\expndtw0\kerning0
+:\cf8 \expnd0\expndtw0\kerning0
+self\cf7 \expnd0\expndtw0\kerning0
+action\cf5 \expnd0\expndtw0\kerning0
+:\cf8 \expnd0\expndtw0\kerning0
+@selector\cf5 \expnd0\expndtw0\kerning0
+(openURL:)];
+\f1\fs36 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+
+\f5\fs22 \cf5 \expnd0\expndtw0\kerning0
+\'a0 \'a0\cf8 \expnd0\expndtw0\kerning0
+self\cf5 \expnd0\expndtw0\kerning0
+.\cf9 \expnd0\expndtw0\kerning0
+weiboLabel\cf5 \expnd0\expndtw0\kerning0
+.\cf6 \expnd0\expndtw0\kerning0
+userInteractionEnabled\cf5 \expnd0\expndtw0\kerning0
+=\cf8 \expnd0\expndtw0\kerning0
+YES\cf5 \expnd0\expndtw0\kerning0
+;
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400\sa360
+
+\f5\fs22 \cf5 \expnd0\expndtw0\kerning0
+\'a0 \'a0[\cf8 \expnd0\expndtw0\kerning0
+self\cf5 \expnd0\expndtw0\kerning0
+.\cf9 \expnd0\expndtw0\kerning0
+weiboLabel\cf5 \expnd0\expndtw0\kerning0
+ \cf7 \expnd0\expndtw0\kerning0
+addGestureRecognizer\cf5 \expnd0\expndtw0\kerning0
+:tapRecognizerWeibo];
+\f1\fs36 \expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\f6\fs24 \cf10 \cb11 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\cf12 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 //
+\f3 \'d9\'af\'d9\'af\'b9\'d9\'cd\'f8\'c1\'ac\'bd\'d3
+\f6 \cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0UILabel\'a0*labelGovUrl\'a0=\'a0[[UILabel\'a0alloc]\'a0initWithFrame:CGRectMake(73.0,\'a0330.0,\'a0180.0,\'a040.0)];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.autoresizingMask\'a0=\'a0(UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.text\'a0=\'a0@\cf14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 "
+\f3 \'d9\'af\'d9\'af\'b9\'d9\'cd\'f8
+\f6 \'a0>"\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 ;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.backgroundColor\'a0=\'a0[UIColor\'a0clearColor];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.textColor\'a0=\'a0[UIColor\'a0whiteColor];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.font\'a0=\'a0[UIFont\'a0fontWithName:@\cf14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 "Helvetica-Bold"\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0size:14];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.userInteractionEnabled\'a0=\'a0YES;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0labelGovUrl.tag\'a0=\'a0K_NNGOV_WEBSITE_LABEL_URL;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0UITapGestureRecognizer\'a0*tapGesture\'a0=\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0[[[UITapGestureRecognizer\'a0alloc]\'a0initWithTarget:self\'a0action:@selector(openURL:)]\'a0autorelease];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	13.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0[labelGovUrl\'a0addGestureRecognizer:tapGesture];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	14.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0[self.view\'a0addSubview:labelGovUrl];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	15.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0[labelGovUrl\'a0release];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	16.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	17.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	18.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 -(\cf15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 void\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 )openURL:(UITapGestureRecognizer\'a0*)gesture\{\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	19.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0NSInteger\'a0tag\'a0=\'a0gesture.view.tag;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	20.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0NSString\'a0*url\'a0=\'a0nil;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	21.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\cf15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 if\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0(tag\'a0==\'a0K_NNWEIBO_LABEL_URL)\'a0\{\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	22.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0url\'a0=\'a0@\cf14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 "http://t.qq.com/yourgame/"\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 ;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	23.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\}\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	24.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\cf15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 if\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 (tag\'a0==\'a0K_NNGOV_WEBSITE_LABEL_URL)\{\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	25.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0url\'a0=\'a0@\cf14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 "http://www.zjnn.cn/"\cf10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 ;\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	26.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0\}\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	27.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a0\'a0\'a0\'a0[[UIApplication\'a0sharedApplication]\'a0openURL:[NSURL\'a0URLWithString:url]];\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\ls1\ilvl0\cf10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	28.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \}\'a0\'a0\cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+}

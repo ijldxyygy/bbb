@@ -1,0 +1,176 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red196\green26\blue22;\red170\green13\blue145;\red28\green0\blue207;\red63\green110\blue116;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs28 \cf2 \CocoaLigature0 \'cf\'df\'b3\'cc\'bc\'e4\'cd\'a8\'d0\'c5\
+\
+\pard\tx674\pardeftab674\pardirnatural
+
+\f1 \cf2 // 1. url, 
+\f0 \'c8\'b7\'b6\'a8\'d2\'bb\'b8\'f6\'cd\'f8\'c2\'e7\'c9\'cf\'b5\'c4\'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6
+\f1 \cf0 \
+    \cf3 NSURL\cf0  *url = [\cf3 NSURL\cf0  \cf4 URLWithString\cf0 :\cf5 @"http://h.hiphotos.baidu.com/image/pic/item/5366d0160924ab1828b7c95336fae6cd7b890b34.jpg"\cf0 ];\
+    \
+    \cf2 // 2. 
+\f0 \'cd\'a8\'b9\'fd
+\f1 url
+\f0 \'bf\'c9\'d2\'d4\'cf\'c2\'d4\'d8\'b6\'d4\'d3\'a6\'b5\'c4\'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4
+\f1 , 
+\f0 \'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4\'b4\'ab\'ca\'e4\'b5\'c4\'b6\'bc\'ca\'c7\'b6\'fe\'bd\'f8\'d6\'c6
+\f1 \cf0 \
+    \cf3 NSData\cf0  *data = [\cf3 NSData\cf0  \cf4 dataWithContentsOfURL\cf0 :url];\
+    \
+    \cf2 // 3. 
+\f0 \'b6\'fe\'bd\'f8\'d6\'c6\'d7\'aa\'b3\'c9\'cd\'bc\'c6\'ac
+\f1 \cf0 \
+    \cf3 UIImage\cf0  *image = [\cf3 UIImage\cf0  \cf4 imageWithData\cf0 :data];\
+    \
+    \cf2 // 4. 
+\f0 \'b0\'d1\'cd\'bc\'c6\'ac\'cf\'d4\'ca\'be\'b5\'bd
+\f1 iconView\cf0 \
+\cf2 //    self.iconView.image = image;\cf0 \
+    \cf2 // 
+\f0 \'d4\'da\'d5\'e2\'c0\'ef\'d0\'e8\'d2\'aa\'b0\'d1\'ca\'fd\'be\'dd\'b4\'ab\'b5\'bd\'d6\'f7\'cf\'df\'b3\'cc\'a3\'ac\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'b8\'fc\'d0\'c2
+\f1 UI\cf0 \
+\cf2 //    1.\cf0 \
+    [\cf6 self\cf0  \cf4 performSelectorOnMainThread\cf0 :\cf6 @selector\cf0 (downloadFinish:) \cf4 withObject\cf0 :image \cf4 waitUntilDone\cf0 :\cf6 NO\cf0 ];\
+    \cf2 //2. [self performSelector:@selector(downloadFinish:) onThread:[NSThread mainThread] withObject:image waitUntilDone:NO];\cf0 \
+    \cf2 //3.\cf0 \
+\cf2 //    [self.iconView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES];\cf0 \
+    \
+    \cf2 // waitUntilDone
+\f0 \'a3\'ba\'b1\'ed\'ca\'be\'ca\'c7\'b7\'f1\'b5\'c8\'b4\'fd
+\f1 @selector(setImage:) 
+\f0 \'b7\'bd\'b7\'a8\'d6\'b4\'d0\'d0\'cd\'ea\'b3\'c9
+\f1 \cf0 \
+    \cf2 // 
+\f0 \'c8\'e7\'b9\'fb\'ca\'c7
+\f1 YES
+\f0 \'a3\'ac\'be\'cd\'b5\'c8\'b4\'fd
+\f1 setImage
+\f0 \'d4\'da\'c6\'e4\'cb\'fb\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0\'bd\'e1\'ca\'f8\'a3\'ac\'d4\'d9\'cd\'f9\'cf\'c2\'d6\'b4\'d0\'d0
+\f1 \cf0 \
+    \cf4 NSLog\cf0 (\cf5 @"
+\f0 \'cd\'ea\'b3\'c9\'a3\'a1\'a3\'a1
+\f1 "\cf0 );\
+\
+\
+\
+\cf2 // 
+\f0 \'d7\'d3\'cf\'df\'b3\'cc\'c0\'ef\'c3\'e6\'b5\'c4
+\f1 runloop
+\f0 \'c4\'ac\'c8\'cf\'b2\'bb\'bf\'aa\'c6\'f4\'a3\'ac
+\f1  
+\f0 \'d2\'b2\'be\'cd\'d2\'e2\'ce\'b6\'b2\'bb\'bb\'e1\'d7\'d4\'b6\'af\'b4\'b4\'bd\'a8\'d7\'d4\'b6\'af\'ca\'cd\'b7\'c5\'b3\'d8
+\f1 , 
+\f0 \'d7\'d3\'cf\'df\'b3\'cc\'c0\'ef\'c3\'e6
+\f1 autorelease
+\f0 \'b5\'c4\'b6\'d4\'cf\'f3
+\f1  
+\f0 \'be\'cd\'bb\'e1\'c3\'bb\'d3\'d0\'b3\'d8\'d7\'d3\'bf\'c9\'b7\'c5\'a1\'a3
+\f1  
+\f0 \'d2\'b2\'be\'cd\'d2\'e2\'ce\'b6\'ba\'f3\'c3\'e6\'c3\'bb\'b0\'ec\'b7\'a8\'bd\'f8\'d0\'d0\'ca\'cd\'b7\'c5\'a1\'a3
+\f1  
+\f0 \'d4\'ec\'b3\'c9\'c4\'da\'b4\'e6\'d0\'b9\'c2\'b6
+\f1 \cf0 \
+    \cf2 // 
+\f0 \'cb\'f9\'d2\'d4\'d0\'e8\'d2\'aa\'ca\'d6\'b6\'af\'b4\'b4\'bd\'a8
+\f1 \cf0 \
+    \cf6 @autoreleasepool\cf0  \{\
+   \
+        \cf4 NSLog\cf0 (\cf5 @"%@"\cf0 , [\cf3 NSThread\cf0  \cf4 currentThread\cf0 ]);\
+        \
+        \cf2 // 1. url, 
+\f0 \'c8\'b7\'b6\'a8\'d2\'bb\'b8\'f6\'cd\'f8\'c2\'e7\'c9\'cf\'b5\'c4\'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6
+\f1 \cf0 \
+        \cf3 NSURL\cf0  *url = [\cf3 NSURL\cf0  \cf4 URLWithString\cf0 :\cf5 @"http://h.hiphotos.baidu.com/image/pic/item/5366d0160924ab1828b7c95336fae6cd7b890b34.jpg"\cf0 ];\
+        \
+        \cf2 // 2. 
+\f0 \'cd\'a8\'b9\'fd
+\f1 url
+\f0 \'bf\'c9\'d2\'d4\'cf\'c2\'d4\'d8\'b6\'d4\'d3\'a6\'b5\'c4\'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4
+\f1 , 
+\f0 \'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4\'b4\'ab\'ca\'e4\'b5\'c4\'b6\'bc\'ca\'c7\'b6\'fe\'bd\'f8\'d6\'c6
+\f1 \cf0 \
+        \cf3 NSData\cf0  *data = [\cf3 NSData\cf0  \cf4 dataWithContentsOfURL\cf0 :url];\
+        \
+        \cf2 // 3. 
+\f0 \'b6\'fe\'bd\'f8\'d6\'c6\'d7\'aa\'b3\'c9\'cd\'bc\'c6\'ac
+\f1 \cf0 \
+        \cf3 UIImage\cf0  *image = [\cf3 UIImage\cf0  \cf4 imageWithData\cf0 :data];\
+        \
+        \cf2 // 4. 
+\f0 \'b0\'d1\'cd\'bc\'c6\'ac\'cf\'d4\'ca\'be\'b5\'bd
+\f1 iconView\cf0 \
+    \cf2 //    self.iconView.image = image;\cf0 \
+        \cf2 // 
+\f0 \'d4\'da\'d5\'e2\'c0\'ef\'d0\'e8\'d2\'aa\'b0\'d1\'ca\'fd\'be\'dd\'b4\'ab\'b5\'bd\'d6\'f7\'cf\'df\'b3\'cc\'a3\'ac\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'b8\'fc\'d0\'c2
+\f1 UI\cf0 \
+    \cf2 //    1.\cf0 \
+        [\cf6 self\cf0  \cf4 performSelectorOnMainThread\cf0 :\cf6 @selector\cf0 (downloadFinish:) \cf4 withObject\cf0 :image \cf4 waitUntilDone\cf0 :\cf6 NO\cf0 ];\
+        \cf2 //2. [self performSelector:@selector(downloadFinish:) onThread:[NSThread mainThread] withObject:image waitUntilDone:NO];\cf0 \
+        \cf2 //3.\cf0 \
+    \cf2 //    [self.iconView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES];\cf0 \
+        \
+        \cf2 // waitUntilDone
+\f0 \'a3\'ba\'b1\'ed\'ca\'be\'ca\'c7\'b7\'f1\'b5\'c8\'b4\'fd
+\f1 @selector(setImage:) 
+\f0 \'b7\'bd\'b7\'a8\'d6\'b4\'d0\'d0\'cd\'ea\'b3\'c9
+\f1 \cf0 \
+        \cf2 // 
+\f0 \'c8\'e7\'b9\'fb\'ca\'c7
+\f1 YES
+\f0 \'a3\'ac\'be\'cd\'b5\'c8\'b4\'fd
+\f1 setImage
+\f0 \'d4\'da\'c6\'e4\'cb\'fb\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0\'bd\'e1\'ca\'f8\'a3\'ac\'d4\'d9\'cd\'f9\'cf\'c2\'d6\'b4\'d0\'d0
+\f1 \cf0 \
+        \cf4 NSLog\cf0 (\cf5 @"
+\f0 \'cd\'ea\'b3\'c9\'a3\'a1\'a3\'a1
+\f1 "\cf0 );\
+\
+\
+\
+ \cf4 dispatch_async\cf0 (\cf4 dispatch_get_global_queue\cf0 (\cf7 0\cf0 , \cf7 0\cf0 ), ^\{\
+        \
+        \cf4 NSLog\cf0 (\cf5 @"%@"\cf0 , [\cf3 NSThread\cf0  \cf4 currentThread\cf0 ]);\
+        \cf2 // 
+\f0 \'ba\'c4\'ca\'b1\'b2\'d9\'d7\'f7
+\f1 : 
+\f0 \'b7\'c5\'d4\'da\'c8\'ab\'be\'d6\'b6\'d3\'c1\'d0\'a3\'ac\'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0
+\f1 \cf0 \
+        \cf2 // 1. url, 
+\f0 \'c8\'b7\'b6\'a8\'d2\'bb\'b8\'f6\'cd\'f8\'c2\'e7\'c9\'cf\'b5\'c4\'d7\'ca\'d4\'b4\'c2\'b7\'be\'b6
+\f1 \cf0 \
+        \cf3 NSURL\cf0  *url = [\cf3 NSURL\cf0  \cf4 URLWithString\cf0 :\cf5 @"http://fe.topit.me/e/d1/12/1170068721aa112d1el.jpg"\cf0 ];\
+        \
+        \cf2 // 2. 
+\f0 \'cd\'a8\'b9\'fd
+\f1 url
+\f0 \'bf\'c9\'d2\'d4\'cf\'c2\'d4\'d8\'b6\'d4\'d3\'a6\'b5\'c4\'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4
+\f1 , 
+\f0 \'cd\'f8\'c2\'e7\'d7\'ca\'d4\'b4\'b4\'ab\'ca\'e4\'b5\'c4\'b6\'bc\'ca\'c7\'b6\'fe\'bd\'f8\'d6\'c6
+\f1 \cf0 \
+        \cf3 NSData\cf0  *data = [\cf3 NSData\cf0  \cf4 dataWithContentsOfURL\cf0 :url];\
+        \
+        \cf2 // 3. 
+\f0 \'b6\'fe\'bd\'f8\'d6\'c6\'d7\'aa\'b3\'c9\'cd\'bc\'c6\'ac
+\f1 \cf0 \
+        \cf3 UIImage\cf0  *image = [\cf3 UIImage\cf0  \cf4 imageWithData\cf0 :data];\
+        \
+        \cf2 // 4. 
+\f0 \'b8\'fc\'d0\'c2
+\f1 UI
+\f0 \'a3\'ac\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc
+\f1 -
+\f0 \'a1\'b7
+\f1  
+\f0 \'d6\'b1\'bd\'d3\'b0\'d1\'c8\'ce\'ce\'f1\'cc\'ed\'bc\'d3\'b5\'bd\'d6\'f7\'b6\'d3\'c1\'d0\'a3\'ac\'be\'cd\'bb\'e1\'d4\'da\'d6\'f7\'b6\'d3\'c1\'d0\'d6\'b4\'d0\'d0
+\f1 \cf0 \
+        \cf4 dispatch_async\cf0 (\cf4 dispatch_get_main_queue\cf0 (), ^\{\
+            \cf6 self\cf0 .\cf8 iconView\cf0 .\cf3 image\cf0  = image;\
+            \cf4 NSLog\cf0 (\cf5 @"-----%@"\cf0 , [\cf3 NSThread\cf0  \cf4 currentThread\cf0 ]);\
+}

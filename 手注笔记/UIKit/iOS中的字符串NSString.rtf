@@ -1,0 +1,239 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fnil\fcharset134 STSongti-SC-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red243\green246\blue252;\red42\green42\blue42;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh10200\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs28 \cf0 \cb2 \expnd0\expndtw0\kerning0
+NSstring * str1 = @"hello world";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str = [[NSString alloc]initWithString:@"hello world!"];\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str_1 = [[NSString alloc]initWithUTF8String:"hello world"];//\'b0\'d1C\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'af\'ce\'aaOC\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+int a = 123;\cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1 \cf3 \cb2 \expnd0\expndtw0\kerning0
+NSString * str_3 = [[NSString alloc]initWithFormat:@"a = %d %s%@", a, "abcd", @"efg"];//\'d3\'c3\'b8\'f1\'ca\'bd\'bb\'af\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'f5\'ca\'bc\'bb\'af\cb1 \
+\cb2 \uc0\u160 \cb1 \
+\pard\pardeftab720
+
+\f0 \cf0 \cb2 \expnd0\expndtw0\kerning0
+//\'bf\'c9\'cd\'ea\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'c6\'b4\'bd\'d3\'d2\'d4\'bc\'b0\'cd\'ea\'b3\'c9C\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d3\'ebOC\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d7\'aa\'bb\'af\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str1 = [NSString stringWithString:@"hello world"];\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str2 = [NSString stringWithUTF8String:"hello world"];\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str3 = [NSString stringWithFormat:@"%s","hello world"];\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSstring * str1 = @"hello";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str = [[NSString alloc]initWithString:@"hello world!"];\cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1 \cf3 \cb2 \expnd0\expndtw0\kerning0
+NSString * str_1 = [[NSString alloc]initWithUTF8String:"hello world"];//\'b0\'d1C\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'af\'ce\'aaOC\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \
+\cb2 \uc0\u160 \cb1 \
+\pard\pardeftab720
+
+\f0 \cf0 \cb2 \expnd0\expndtw0\kerning0
+int a = 123;\cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1 \cf3 \cb2 \expnd0\expndtw0\kerning0
+NSString * str_3 = [[NSString alloc]initWithFormat:@"a = %d %s%@", a, "abcd", @"efg"];//\'d3\'c3\'b8\'f1\'ca\'bd\'bb\'af\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'f5\'ca\'bc\'bb\'af\cb1 \
+\cb2 \uc0\u160 \cb1 \
+\pard\pardeftab720
+
+\f0\b \cf0 \cb2 \expnd0\expndtw0\kerning0
+\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'af\'a3\'ba
+\b0 \cb1 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720
+\cf0 \cb2 \expnd0\expndtw0\kerning0
+NSString * str = @"hello";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+const char *p = [str UTF8String];\'bd\'abOC\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'af\'ce\'aaC\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+str = @"123";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+int a = [str intValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9\'d5\'fb\'d0\'cd\'ca\'fd\'be\'dd\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str floatValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9float\'d0\'cd\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str doubleValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9double\'d0\'cd\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str = @"hello";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+const char *p = [str UTF8String];\'bd\'abOC\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'af\'ce\'aaC\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+str = @"123";\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+int a = [str intValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9\'d5\'fb\'d0\'cd\'ca\'fd\'be\'dd\cb1 \expnd0\expndtw0\kerning0
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str floatValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9float\'d0\'cd\cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1 \cf3 \cb2 \expnd0\expndtw0\kerning0
+[str doubleValue];//\'bd\'ab\'ca\'fd\'d7\'d6\'b4\'ae\'d7\'aa\'bb\'af\'b3\'c9double\'d0\'cd\cb1 \
+\cb2 \uc0\u160 \cb1 \
+\pard\pardeftab720
+
+\f0\b \cf0 \cb2 \expnd0\expndtw0\kerning0
+\'b3\'a3\'d3\'c3\'b5\'c4NSString \'a3\'ba
+\b0 \cb1 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720
+\cf0 \cb2 \expnd0\expndtw0\kerning0
+NSLog(@"%ld",[str1 length]); //\'c7\'f3\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSLog(@"%c", [str1 characterAtIndex:1]);//\'bb\'f1\'c8\'a1\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'b5\'c4\'d7\'d6\'b7\'fb\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+BOOL ret = [str1 isEqualTo:str2];//\'b1\'c8\'bd\'cf\'c1\'bd\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'ca\'c7\'b7\'f1\'cf\'e0\'b5\'c8,\'cf\'e0\'b5\'c8\'b7\'b5\'bb\'d8YES(1),\'b2\'bb\'cf\'e0\'b5\'c8\'b7\'b5\'bb\'d8NO(0) (BOOL YES(1) NO(0))\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+long ret1 = [str1 compare:str2];//\'b1\'c8\'bd\'cf\'c1\'bd\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b4\'f3\'d0\'a1,str1\'b4\'f3\'d3\'da \'b7\'b5\'bb\'d81 \'cf\'e0\'b5\'c8\'b7\'b5\'bb\'d80 \'d0\'a1\'d3\'da\'b7\'b5\'bb\'d8-1\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+long ret2 = [str1 caseInsensitiveCompare:str2];//\'b2\'bb\'c7\'f8\'b7\'d6\'b4\'f3\'d0\'a1\'d0\'b4\'b1\'c8\'bd\'cf\'d7\'d6\'b7\'fb\'b4\'ae\'b4\'f3\'d0\'a1\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * ptr = [str2 uppercaseString];//\'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'d0\'a1\'d0\'b4\'d7\'d6\'b7\'fb\'d7\'aa\'bb\'bb\'b3\'c9\'b4\'f3\'d0\'b4 \'b2\'bb\'b8\'c4\'b1\'e4\'d4\'ad\'c0\'b4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+ptr = [str1 lowercaseString];//\'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'b4\'f3\'d0\'b4\'d7\'d6\'b7\'fb\'d7\'aa\'bb\'bb\'b3\'c9\'d0\'a1\'d0\'b4 \'b2\'bb\'b8\'c4\'b1\'e4\'d4\'ad\'c0\'b4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+ptr = [str3 capitalizedString];//\'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'b3\'f6\'cf\'d6\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'c4\'b8\'d7\'aa\'bb\'bb\'b3\'c9\'b4\'f3\'d0\'b4\'a3\'ac\'c6\'e4\'d3\'e0\'d7\'d6\'c4\'b8\'d0\'a1\'d0\'b4\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str4 = @"hello world";\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSRange range = [str4 rangeOfString:@"wr"];//\'b2\'e9\'d5\'d2\'d7\'d3\'b4\'ae\'a3\'ac\'d5\'d2\'b2\'bb\'b5\'bd\'b7\'b5\'bb\'d8NSNotFound \'d5\'d2\'b5\'bd\'b7\'b5\'bb\'d8location\'ba\'cdlength\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+if (range.location != NSNotFound) \{\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSLog(@"%ld %ld",range.location, range.length);\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+\}\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str5 = @"helloworld";\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * ptr1 = [str5 substringToIndex:4];//\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'e9\'c8\'a1 \'b4\'d3\'cf\'c2\'b1\'ea0\'bf\'aa\'ca\'bc\'b5\'bd4 \'b2\'bb\'b0\'fc\'c0\'a84\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * ptr2 = [str5 substringFromIndex:5];//\'b4\'d3\'cf\'c2\'b1\'ea5\'bf\'aa\'ca\'bc\'b3\'e9\'c8\'a1\'b5\'bd\'d7\'d6\'b7\'fb\'b4\'ae\'bd\'e1\'ca\'f8 \'b0\'fc\'c0\'a85\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSRange range1 = \{4,3\};//\'bd\'e1\'b9\'b9\'cc\'e5\'b3\'f5\'ca\'bc\'bb\'af\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * ptr3 = [str5 substringWithRange:range1];//\'d4\'darange\'d6\'b8\'b6\'a8\'b7\'b6\'ce\'a7\'c4\'da\'b3\'e9\'c8\'a1\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * ptr4 = [str5 substringWithRange:NSMakeRange(4,3)];//NSMakeRange\'bf\'c9\'d2\'d4\'c9\'fa\'b3\'c9\'d2\'bb\'b8\'f6\'bd\'e1\'b9\'b9\'cc\'e5\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str = @"www.baidu.com";\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+BOOL ret = [str hasPrefix:@"www"];//\'c5\'d0\'b6\'cf\'d7\'d6\'b7\'fb\'b4\'ae\'ca\'c7\'b7\'f1\'d2\'d4\'d6\'b8\'b6\'a8\'d7\'d6\'b7\'fb\'b4\'ae\'bf\'aa\'cd\'b7\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSString * str1 = @"1.txt";\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+BOOL ret1 = [str hasSuffix:@".txt"];//\'c5\'d0\'b6\'cf\'d7\'d6\'b7\'fb\'b4\'ae\'ca\'c7\'b7\'f1\'d2\'d4\'d6\'b8\'b6\'a8\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'bd\'e1\'ce\'b2\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSMutableString\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae(\'b6\'af\'cc\'ac\'d4\'f6\'bc\'d3\'ba\'cd\'bc\'f5\'c9\'d9\'b5\'c4) \'bc\'cc\'b3\'d0\'d3\'daNSString\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3NSString\'b5\'c4\'cb\'f9\'d3\'d0\'b7\'bd\'b7\'a8\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+NSMutableString * str = [[NSMutableString alloc]initWithString:@"hello"];//\'bd\'ab\'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'bb\'ce\'aa\'bf\'c9\'b1\'e4\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str insertString:@"123" atIndex:1];//\'d4\'da\'d6\'b8\'b6\'a8\'cf\'c2\'b1\'ea(\'b2\'bb\'d2\'aa\'d4\'bd\'bd\'e7)\'ce\'bb\'d6\'c3\'b2\'e5\'c8\'ebNSString\'c0\'e0\'d0\'cd\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str appendString:@"123"];//\'d4\'da\'d7\'d6\'b7\'fb\'b4\'ae\'c4\'a9\'ce\'b2\'d7\'b7\'bc\'d3\'d7\'d6\'b7\'fb\'b4\'ae\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str deleteCharactersInRange:NSMakeRange(0, 2)];//\'b4\'d3\'d6\'b8\'b6\'a8\'cf\'c2\'b1\'ea\'c9\'be\'b3\'fdlength\'b8\'f6\'d7\'d6\'b7\'fb\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str setString:@"baidu"];//\'d0\'de\'b8\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'d2\'e0\'b3\'c6\'b6\'d4\'b8\'c3\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b8\'b3\'d6\'b5\cb1 \expnd0\expndtw0\kerning0
+\
+\
+\cb2 \expnd0\expndtw0\kerning0
+[str replaceCharactersInRange:NSMakeRange(3, 1) withString:@"ios"];//\'bd\'ab\'d6\'b8\'b6\'a8\'cf\'c2\'b1\'ea\'ce\'bb\'d6\'c3\'b5\'c4length\'b8\'f6\'d7\'d6\'b7\'fb\'cc\'e6\'bb\'bb\'ce\'aa\'d6\'b8\'b6\'a8\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae}

@@ -1,0 +1,502 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red170\green13\blue145;
+\red63\green110\blue116;\red46\green13\blue110;\red196\green26\blue22;\red28\green0\blue207;\red100\green56\blue32;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs28 \cf2 \CocoaLigature0 NSOperation
+\f1 \'d1\'dd\'c1\'b7
+\f0 (
+\f1 \'d5\'c6\'ce\'d5
+\f0 )\
+\
+GCD --> iOS 4.0\
+ - 
+\f1 \'bd\'ab\'c8\'ce\'ce\'f1\'a3\'a8
+\f0 block
+\f1 \'a3\'a9\'cc\'ed\'bc\'d3\'b5\'bd\'b6\'d3\'c1\'d0\'a3\'a8\'b4\'ae\'d0\'d0
+\f0 /
+\f1 \'b2\'a2\'b7\'a2
+\f0 (
+\f1 \'c8\'ab\'be\'d6
+\f0 )
+\f1 \'a3\'a9\'a3\'ac\'d6\'b8\'b6\'a8
+\f0  
+\f1 \'d6\'b4\'d0\'d0\'c8\'ce\'ce\'f1\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 (
+\f1 \'cd\'ac\'b2\'bd
+\f0 (
+\f1 \'d7\'e8\'c8\'fb
+\f0 )/
+\f1 \'d2\'ec\'b2\'bd
+\f0 )\
+ - 
+\f1 \'c4\'c3\'b5\'bd
+\f0  dispatch_get_main_queue()
+\f1 \'a1\'a3
+\f0  
+\f1 \'cf\'df\'b3\'cc\'bc\'e4\'cd\'a8\'d0\'c5
+\f0 \
+ - NSOperation
+\f1 \'ce\'de\'b7\'a8\'d7\'f6\'b5\'bd\'a3\'ac\'d2\'bb\'b4\'ce\'d0\'d4\'d6\'b4\'d0\'d0\'a3\'ac\'d1\'d3\'b3\'d9\'d6\'b4\'d0\'d0\'a3\'ac\'b5\'f7\'b6\'c8\'d7\'e9
+\f0 (op
+\f1 \'cf\'e0\'b6\'d4\'b8\'b4\'d4\'d3
+\f0 )\
+\
+ \
+ NSOperation ----> iOS 2.0 
+\f1 \'a3\'a8\'ba\'f3\'c0\'b4\'c6\'bb\'b9\'fb\'b8\'c4\'d4\'ec\'c1\'cb
+\f0 NSOperation
+\f1 \'b5\'c4\'b5\'d7\'b2\'e3\'a3\'a9
+\f0 \
+ - 
+\f1 \'bd\'ab\'b2\'d9\'d7\'f7
+\f0 (
+\f1 \'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0
+\f0 )
+\f1 \'cc\'ed\'bc\'d3\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 (
+\f1 \'b2\'a2\'b7\'a2
+\f0 /
+\f1 \'c8\'ab\'be\'d6
+\f0 )\
+ - [NSOperationQueue mainQueue] 
+\f1 \'d6\'f7\'b6\'d3\'c1\'d0\'a1\'a3
+\f0  
+\f1 \'c8\'ce\'ce\'f1\'cc\'ed\'bc\'d3\'b5\'bd\'d6\'f7\'b6\'d3\'c1\'d0\'a3\'ac
+\f0  
+\f1 \'be\'cd\'bb\'e1\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0
+\f0 \
+ - 
+\f1 \'cc\'e1\'b9\'a9\'c1\'cb\'d2\'bb\'d0\'a9
+\f0 GCD
+\f1 \'b2\'bb\'ba\'c3\'ca\'b5\'cf\'d6\'b5\'c4\'a3\'ac
+\f0 \'94
+\f1 \'d7\'ee\'b4\'f3\'b2\'a2\'b7\'a2\'ca\'fd
+\f0 \'93\
+ - 
+\f1 \'d4\'dd\'cd\'a3
+\f0 /
+\f1 \'bc\'cc\'d0\'f8
+\f0  --- 
+\f1 \'b9\'d2\'c6\'f0
+\f0 \
+ - 
+\f1 \'c8\'a1\'cf\'fb\'cb\'f9\'d3\'d0\'b5\'c4\'c8\'ce\'ce\'f1
+\f0 \
+ - 
+\f1 \'d2\'c0\'c0\'b5\'b9\'d8\'cf\'b5
+\f0 \
+ */\cf0 \
+\
+\cf2 /**\
+ 
+\f1 \'d0\'a1\'bd\'e1\'d2\'bb\'cf\'c2
+\f0 :\
+ 
+\f1 \'d6\'bb\'d2\'aa\'ca\'c7
+\f0 NSOperation
+\f1 \'b5\'c4\'d7\'d3\'c0\'e0
+\f0  
+\f1 \'be\'cd\'c4\'dc\'cc\'ed\'bc\'d3\'b5\'bd\'b2\'d9\'d7\'f7\'b6\'d3\'c1\'d0
+\f0 \
+ - 
+\f1 \'d2\'bb\'b5\'a9\'b2\'d9\'d7\'f7\'cc\'ed\'bc\'d3\'b5\'bd\'b6\'d3\'c1\'d0\'a3\'ac
+\f0  
+\f1 \'be\'cd\'bb\'e1\'d7\'d4\'b6\'af\'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0
+\f0 \
+ - 
+\f1 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'cc\'ed\'bc\'d3\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 , 
+\f1 \'b6\'f8\'ca\'c7\'ca\'b9\'d3\'c3
+\f0 start
+\f1 \'b7\'bd\'b7\'a8\'a3\'ac\'bb\'e1\'d4\'da\'b5\'b1\'c7\'b0\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0\'b2\'d9\'d7\'f7
+\f0 \
+ - 
+\f1 \'c8\'e7\'b9\'fb\'d2\'aa\'d7\'f6\'cf\'df\'b3\'cc\'bc\'e4\'cd\'a8\'d0\'c5\'a3\'ac\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3
+\f0 [NSOperationQueue mainQueue]
+\f1 \'c4\'c3\'b5\'bd\'d6\'f7\'b6\'d3\'c1\'d0\'a3\'ac\'cd\'f9\'d6\'f7\'b6\'d3\'c1\'d0\'cc\'ed\'bc\'d3\'b2\'d9\'d7\'f7
+\f0 (
+\f1 \'b8\'fc\'d0\'c2
+\f0 UI)\
+\
+// 
+\f1 \'c0\'c1\'bc\'d3\'d4\'d8\'b5\'c4\'b7\'bd\'ca\'bd\'a3\'ac\'b3\'f5\'ca\'bc\'bb\'af
+\f0 NSOperationQueue
+\f1 \'b6\'d4\'cf\'f3
+\f0 \cf0 \
+- (\cf3 NSOperationQueue\cf0  *)opQueue\
+\{\
+    \cf4 if\cf0  (\cf5 _opQueue\cf0  == \cf4 nil\cf0 ) \{\
+        \cf5 _opQueue\cf0  = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \}\
+    \cf4 return\cf0  \cf5 _opQueue\cf0 ;\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'d2\'c0\'c0\'b5\'b9\'d8\'cf\'b5
+\f0 \cf0 \
+- (\cf4 void\cf0 )dependecy\
+\{\
+    \cf2 /**\
+     
+\f1 \'c0\'fd\'d7\'d3\'a3\'ba
+\f0 \
+     1. 
+\f1 \'cf\'c2\'d4\'d8\'d2\'bb\'b8\'f6\'d0\'a1\'cb\'b5\'b5\'c4\'d1\'b9\'cb\'f5\'b0\'fc
+\f0 \
+     2. 
+\f1 \'bd\'e2\'d1\'b9\'cb\'f5\'a3\'ac\'c9\'be\'b3\'fd\'d1\'b9\'cb\'f5\'b0\'fc
+\f0 \
+     3. 
+\f1 \'b8\'fc\'d0\'c2
+\f0 UI\
+     \
+     */\cf0 \
+    \cf3 NSBlockOperation\cf0  *op1 = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"1. 
+\f1 \'cf\'c2\'d4\'d8\'d2\'bb\'b8\'f6\'d0\'a1\'cb\'b5\'b5\'c4\'d1\'b9\'cb\'f5\'b0\'fc
+\f0 , %@"\cf0 ,[\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+    \}];\
+    \cf3 NSBlockOperation\cf0  *op2 = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"2. 
+\f1 \'bd\'e2\'d1\'b9\'cb\'f5\'a3\'ac\'c9\'be\'b3\'fd\'d1\'b9\'cb\'f5\'b0\'fc
+\f0 , %@"\cf0 ,[\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+    \}];\
+    \cf3 NSBlockOperation\cf0  *op3 = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"3. 
+\f1 \'b8\'fc\'d0\'c2
+\f0 UI, %@"\cf0 ,[\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+    \}];\
+    \
+    \cf2 // 
+\f1 \'d6\'b8\'b6\'a8\'c8\'ce\'ce\'f1\'d6\'ae\'bc\'e4\'b5\'c4\'d2\'c0\'c0\'b5\'b9\'d8\'cf\'b5
+\f0  -- 
+\f1 \'d2\'c0\'c0\'b5\'b9\'d8\'cf\'b5\'bf\'c9\'d2\'d4\'bf\'e7\'b6\'d3\'c1\'d0
+\f0 (
+\f1 \'bf\'c9\'d2\'d4\'d4\'da\'d7\'d3\'cf\'df\'b3\'cc\'cf\'c2\'d4\'d8\'cd\'ea\'a3\'ac\'b5\'bd\'d6\'f7\'cf\'df\'b3\'cc\'b8\'fc\'d0\'c2
+\f0 UI)\cf0 \
+    [op2 \cf6 addDependency\cf0 :op1];\
+    [op3 \cf6 addDependency\cf0 :op2];\
+    \
+    \cf2 // 
+\f1 \'d7\'a2\'d2\'e2\'b5\'e3\'a3\'ba\'d2\'bb\'b6\'a8\'b2\'bb\'d2\'aa\'b3\'f6\'cf\'d6\'d1\'ad\'bb\'b7\'d2\'c0\'c0\'b5\'b9\'d8\'cf\'b5
+\f0 \cf0 \
+\cf2 //    [op1 addDependency:op3];\cf0 \
+    \
+    \cf2 // waitUntilFinished 
+\f1 \'c0\'e0\'cb\'c6
+\f0 GCD
+\f1 \'b5\'c4\'b5\'f7\'b6\'c8\'d7\'e9\'b5\'c4\'cd\'a8\'d6\'aa
+\f0 \cf0 \
+    \cf2 // NO 
+\f1 \'b2\'bb\'b5\'c8\'b4\'fd\'a3\'ac\'bb\'e1\'d6\'b1\'bd\'d3\'d6\'b4\'d0\'d0
+\f0   NSLog(@"come here");\cf0 \
+    \cf2 // YES 
+\f1 \'b5\'c8\'b4\'fd\'c9\'cf\'c3\'e6\'b5\'c4\'b2\'d9\'d7\'f7\'d6\'b4\'d0\'d0\'bd\'e1\'ca\'f8\'a3\'ac\'d4\'d9
+\f0  
+\f1 \'d6\'b4\'d0\'d0
+\f0   NSLog(@"come here")\cf0 \
+    [\cf4 self\cf0 .\cf5 opQueue\cf0  \cf6 addOperations\cf0 :\cf8 @[\cf0 op1, op2\cf8 ]\cf0  \cf6 waitUntilFinished\cf0 :\cf4 YES\cf0 ];\
+    \
+    \cf2 // 
+\f1 \'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'b8\'fc\'d0\'c2
+\f0 UI\cf0 \
+    [[\cf3 NSOperationQueue\cf0  \cf6 mainQueue\cf0 ] \cf6 addOperation\cf0 :op3];\
+    \cf6 NSLog\cf0 (\cf7 @"come here"\cf0 );\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'c8\'a1\'cf\'fb\'b6\'d3\'c1\'d0\'c0\'ef\'b5\'c4\'cb\'f9\'d3\'d0\'b2\'d9\'d7\'f7
+\f0 \cf0 \
+\cf2 // \'93
+\f1 \'c8\'a1\'cf\'fb\'b2\'d9\'d7\'f7\'a3\'ac\'b2\'a2\'b2\'bb\'bb\'e1\'d3\'b0\'cf\'ec\'b6\'d3\'c1\'d0\'b5\'c4\'b9\'d2\'c6\'f0\'d7\'b4\'cc\'ac
+\f0 \'94\cf0 \
+- (\cf4 IBAction\cf0 )cancelAll\
+\{\
+    \cf2 // 
+\f1 \'c8\'a1\'cf\'fb\'b6\'d3\'c1\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'b2\'d9\'d7\'f7
+\f0 \cf0 \
+    [\cf4 self\cf0 .\cf5 opQueue\cf0  \cf6 cancelAllOperations\cf0 ]; \cf2 // 
+\f1 \'c8\'a1\'cf\'fb\'b6\'d3\'c1\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'b2\'d9\'d7\'f7\'a3\'ac\'bb\'e1\'b0\'d1\'c8\'ce\'ce\'f1\'b4\'d3\'b6\'d3\'c1\'d0\'c0\'ef\'c3\'e6\'c8\'ab\'b2\'bf\'c9\'be\'b3\'fd
+\f0 \cf0 \
+    \
+    \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'c8\'a1\'cf\'fb\'cb\'f9\'d3\'d0\'b5\'c4\'b2\'d9\'d7\'f7
+\f0 "\cf0 );\
+    \
+    \cf2 // 
+\f1 \'c8\'a1\'cf\'fb\'b6\'d3\'c1\'d0\'b5\'c4\'b9\'d2\'c6\'f0\'d7\'b4\'cc\'ac
+\f0 \cf0 \
+    \cf2 // 
+\f1 \'a3\'a8\'d6\'bb\'d2\'aa\'ca\'c7\'c8\'a1\'cf\'fb\'c1\'cb\'b6\'d3\'c1\'d0\'b5\'c4\'b2\'d9\'d7\'f7\'a3\'ac\'ce\'d2\'c3\'c7\'be\'cd\'b0\'d1\'b6\'d3\'c1\'d0\'b4\'a6\'d3\'da\'c6\'f4\'b6\'af\'d7\'b4\'cc\'ac\'a1\'a3\'d2\'d4\'b1\'e3\'d3\'da\'b6\'d3\'c1\'d0\'b5\'c4\'bc\'cc\'d0\'f8\'a3\'a9
+\f0 \cf0 \
+    \cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 suspended\cf0  = \cf4 NO\cf0 ;\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'d4\'dd\'cd\'a3
+\f0 /
+\f1 \'bc\'cc\'d0\'f8
+\f0  (
+\f1 \'b6\'d4\'b6\'d3\'c1\'d0\'b5\'c4\'d4\'dd\'cd\'a3\'ba\'cd\'bc\'cc\'d0\'f8
+\f0 )\cf0 \
+- (\cf4 IBAction\cf0 )pause\
+\{\
+    \cf2 // 
+\f1 \'c5\'d0\'b6\'cf\'b2\'d9\'d7\'f7\'b5\'c4\'ca\'fd\'c1\'bf\'a3\'ac\'b5\'b1\'c7\'b0\'b6\'d3\'c1\'d0\'c0\'ef\'c3\'e6\'ca\'c7\'b2\'bb\'ca\'c7\'d3\'d0\'b2\'d9\'d7\'f7
+\f0 \cf0 \
+    \cf4 if\cf0  (\cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 operationCount\cf0  == \cf8 0\cf0 ) \{\
+        \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'c3\'bb\'d3\'d0\'b2\'d9\'d7\'f7
+\f0 "\cf0 );\
+        \cf4 return\cf0 ;\
+    \}\
+    \
+    \cf2 // 
+\f1 \'d4\'dd\'cd\'a3\'bc\'cc\'d0\'f8
+\f0 \cf0 \
+    \cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 suspended\cf0  = !\cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 suspended\cf0 ;\
+    \
+    \cf4 if\cf0  (\cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 suspended\cf0 ) \{ \cf2 // 
+\f1 \'b6\'d3\'c1\'d0\'b5\'c4\'b9\'d2\'c6\'f0\'d2\'d4\'ba\'f3\'a3\'ac\'b6\'d3\'c1\'d0\'c0\'ef\'c3\'e6\'b5\'c4\'b2\'d9\'d7\'f7\'bb\'b9\'d4\'da
+\f0 \cf0 \
+        \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'d4\'dd\'cd\'a3
+\f0 "\cf0 );\
+    \}\cf4 else\cf0 \{\
+        \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'bc\'cc\'d0\'f8
+\f0 "\cf0 );\
+    \}\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'d7\'ee\'b4\'f3\'b2\'a2\'b7\'a2\'ca\'fd
+\f0 \cf0 \
+- (\cf4 void\cf0 )opDemo6\
+\{\
+    \cf2 // 
+\f1 \'c9\'e8\'d6\'c3\'d7\'ee\'b4\'f3\'b5\'c4\'b2\'a2\'b7\'a2\'ca\'fd\'ca\'c7
+\f0 2 (
+\f1 \'d7\'ee\'b4\'f3\'b2\'a2\'b7\'a2\'ca\'fd\'a3\'ac\'b2\'bb\'ca\'c7\'cf\'df\'b3\'cc\'b5\'c4\'ca\'fd\'c1\'bf\'a1\'a3
+\f0  
+\f1 \'b6\'f8\'ca\'c7\'cd\'ac\'ca\'b1\'d6\'b4\'d0\'d0\'b5\'c4\'b2\'d9\'d7\'f7\'b5\'c4\'ca\'fd\'c1\'bf
+\f0 )\cf0 \
+    \cf4 self\cf0 .\cf5 opQueue\cf0 .\cf3 maxConcurrentOperationCount\cf0  = \cf8 2\cf0 ;\
+    \
+    \cf4 for\cf0  (\cf4 int\cf0  i = \cf8 0\cf0 ; i < \cf8 20\cf0 ; i++) \{\
+        \cf3 NSOperation\cf0  *op = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+            \
+            [\cf3 NSThread\cf0  \cf6 sleepForTimeInterval\cf0 :\cf8 1.0\cf0 ];\
+            \
+            \cf6 NSLog\cf0 (\cf7 @"%@---%d"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ], i);\
+        \}];\
+        \
+        [\cf4 self\cf0 .\cf5 opQueue\cf0  \cf6 addOperation\cf0 :op];\
+    \}\
+\}\
+\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf9 #pragma mark - 
+\f1 \'bb\'f9\'b1\'be\'ca\'b9\'d3\'c3
+\f0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 // MARK: 
+\f1 \'cf\'df\'b3\'cc\'bc\'e4\'cd\'a8\'d0\'c5
+\f0 (
+\f1 \'d7\'ee\'d6\'d8\'d2\'aa\'b5\'c4\'b4\'fa\'c2\'eb
+\f0 )\cf0 \
+- (\cf4 void\cf0 )opDemo5\
+\{\
+    \cf3 NSOperationQueue\cf0  *q = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ]\cf6 init\cf0 ];\
+    \
+    [q \cf6 addOperationWithBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'ba\'c4\'ca\'b1\'b2\'d9\'d7\'f7
+\f0 ....%@"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+        \
+        \cf2 // 
+\f1 \'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'b8\'fc\'d0\'c2
+\f0 UI\cf0 \
+        [[\cf3 NSOperationQueue\cf0  \cf6 mainQueue\cf0 ] \cf6 addOperationWithBlock\cf0 :^\{\
+            \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'b8\'fc\'d0\'c2
+\f0 UI....%@"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+        \}];\
+    \}];\
+\}\
+\
+\cf2 // MARK: NSBlockOperation
+\f1 \'b8\'fc\'bc\'f2\'b5\'a5\'b5\'c4\'ca\'b9\'d3\'c3
+\f0 \cf0 \
+- (\cf4 void\cf0 )opDemo4\
+\{\
+    \cf2 // 
+\f1 \'b6\'d3\'c1\'d0
+\f0 \cf0 \
+    \cf3 NSOperationQueue\cf0  *q = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \
+    \cf4 for\cf0  (\cf4 int\cf0  i = \cf8 0\cf0 ; i < \cf8 10\cf0 ; i++) \{\
+        \cf2 // 
+\f1 \'b2\'bb\'b4\'b4\'bd\'a8\'b2\'d9\'d7\'f7\'b6\'d4\'cf\'f3\'a3\'ac\'ca\'b9\'d3\'c3
+\f0 addOperationWithBlock:
+\f1 \'d6\'b1\'bd\'d3\'cc\'ed\'bc\'d3\'b2\'d9\'d7\'f7\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+        [q \cf6 addOperationWithBlock\cf0 :^\{\
+            \cf6 NSLog\cf0 (\cf7 @"%@---%d"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ], i);\
+        \}];\
+    \}\
+    \
+    \cf2 // 
+\f1 \'b4\'b4\'bd\'a8\'b2\'a2\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6
+\f0  NSBlockOperation\cf0 \
+    \cf3 NSBlockOperation\cf0  * op1 = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"op1 --- %@"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ]);\
+\
+    \}];\
+    \
+    [op1 \cf6 addExecutionBlock\cf0 :^\{\
+        \cf6 NSLog\cf0 (\cf7 @"op1-1"\cf0 );\
+    \}];\
+    \
+    [q \cf6 addOperation\cf0 :op1];\
+    \
+    \cf2 // 
+\f1 \'b4\'b4\'bd\'a8\'b2\'a2\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6
+\f0  NSInvocationOperation\cf0 \
+    \cf3 NSOperation\cf0  *op2 = [[\cf3 NSInvocationOperation\cf0  \cf6 alloc\cf0 ] \cf6 initWithTarget\cf0 :\cf4 self\cf0  \cf6 selector\cf0 :\cf4 @selector\cf0 (downloadImage:) \cf6 object\cf0 :\cf7 @"Invocation"\cf0 ];\
+    [q \cf6 addOperation\cf0 :op2];\
+\}\
+\
+\cf2 // MARK: NSBlockOperation
+\f1 \'ca\'b9\'d3\'c3
+\f0 \cf0 \
+- (\cf4 void\cf0 )opDemo3\
+\{\
+    \cf2 // 
+\f1 \'cf\'e0\'b5\'b1\'d3\'da
+\f0 GCD
+\f1 \'b5\'c4\'b2\'a2\'b7\'a2\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+    \cf3 NSOperationQueue\cf0  *q = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \
+    \cf2 // 
+\f1 \'d6\'f7\'b6\'d3\'c1\'d0
+\f0 (
+\f1 \'b8\'fa
+\f0 GCD
+\f1 \'c0\'ef\'b5\'c4\'d6\'f7\'b6\'d3\'c1\'d0\'d2\'bb\'d1\'f9
+\f0 )\cf0 \
+\cf2 //    NSOperationQueue *q = [NSOperationQueue mainQueue];\cf0 \
+    \
+    \cf2 // 
+\f1 \'b6\'e0\'b8\'f6\'b2\'d9\'d7\'f7
+\f0 \cf0 \
+    \cf4 for\cf0  (\cf4 int\cf0  i = \cf8 0\cf0 ; i < \cf8 10\cf0 ; i++) \{\
+        \cf3 NSBlockOperation\cf0  * op = [\cf3 NSBlockOperation\cf0  \cf6 blockOperationWithBlock\cf0 :^\{\
+            \cf6 NSLog\cf0 (\cf7 @"%@---%d"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ], i);\
+        \}];\
+        \
+        \cf2 // 
+\f1 \'b0\'d1
+\f0 block
+\f1 \'b2\'d9\'d7\'f7\'b7\'c5\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+        [q \cf6 addOperation\cf0 :op];\
+    \}\
+    \
+    \cf6 NSLog\cf0 (\cf7 @"
+\f1 \'cd\'ea\'b3\'c9
+\f0 "\cf0 );\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'b6\'e0\'b8\'f6
+\f0 NSInvocationOperation
+\f1 \'ca\'b9\'d3\'c3
+\f0 \cf0 \
+- (\cf4 void\cf0 )opDemo2\
+\{\
+    \cf2 // 
+\f1 \'b6\'d3\'c1\'d0
+\f0  (GCD
+\f1 \'c0\'ef\'c3\'e6\'b5\'c4\'b2\'a2\'b7\'a2\'a3\'a8\'c8\'ab\'be\'d6\'a3\'a9\'b6\'d3\'c1\'d0\'ca\'b9\'d3\'c3\'d7\'ee\'b6\'e0\'a1\'a3\'cb\'f9\'d2\'d4
+\f0 NSOperation
+\f1 \'bc\'bc\'ca\'f5\'d6\'b1\'bd\'d3\'b0\'d1
+\f0 GCD
+\f1 \'c0\'ef\'c3\'e6\'b5\'c4\'b2\'a2\'b7\'a2\'b6\'d3\'c1\'d0\'b7\'e2\'d7\'b0\'c6\'f0\'c0\'b4
+\f0 )\cf0 \
+    \cf2 // NSOperationQueue
+\f1 \'b6\'d3\'c1\'d0\'a3\'ac\'b1\'be\'d6\'ca\'be\'cd\'ca\'c7
+\f0 GCD
+\f1 \'c0\'ef\'c3\'e6\'b5\'c4\'b2\'a2\'b7\'a2\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+    \cf2 // 
+\f1 \'b2\'d9\'d7\'f7\'be\'cd\'ca\'c7
+\f0 GCD
+\f1 \'c0\'ef\'c3\'e6\'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0\'b5\'c4\'c8\'ce\'ce\'f1
+\f0 \cf0 \
+    \cf3 NSOperationQueue\cf0  *q = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \
+    \cf2 // 
+\f1 \'b0\'d1\'b6\'e0\'b8\'f6\'b2\'d9\'d7\'f7\'b7\'c5\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+    \cf4 for\cf0  (\cf4 int\cf0  i = \cf8 0\cf0  ; i < \cf8 10\cf0 ; i++)\
+    \{\
+        \cf3 NSOperation\cf0  *op = [[\cf3 NSInvocationOperation\cf0  \cf6 alloc\cf0 ] \cf6 initWithTarget\cf0 :\cf4 self\cf0  \cf6 selector\cf0 :\cf4 @selector\cf0 (downloadImage:) \cf6 object\cf0 :\cf7 @"Invocation"\cf0 ];\
+        \
+        \cf2 // 
+\f1 \'b0\'d1
+\f0 block
+\f1 \'b2\'d9\'d7\'f7\'b7\'c5\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+        [q \cf6 addOperation\cf0 :op];\
+    \}\
+\}\
+\
+\cf2 // MARK: 
+\f1 \'b5\'a5\'b8\'f6
+\f0 NSInvocationOperation
+\f1 \'ca\'b9\'d3\'c3
+\f0 \cf0 \
+- (\cf4 void\cf0 )opDemo1\
+\{\
+    \cf2 // 1. 
+\f1 \'b4\'b4\'bd\'a8\'b2\'d9\'d7\'f7
+\f0 \cf0 \
+    \cf3 NSOperation\cf0  *op = [[\cf3 NSInvocationOperation\cf0  \cf6 alloc\cf0 ] \cf6 initWithTarget\cf0 :\cf4 self\cf0  \cf6 selector\cf0 :\cf4 @selector\cf0 (downloadImage:) \cf6 object\cf0 :\cf7 @"Invocation"\cf0 ];\
+    \
+    \cf2 // 2. 
+\f1 \'c6\'f4\'b6\'af
+\f0 -- 
+\f1 \'d6\'b1\'bd\'d3\'d4\'da\'b5\'b1\'c7\'b0\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0\'c8\'ce\'ce\'f1
+\f0 \cf0 \
+\cf2 //    [op start];\cf0 \
+    \
+\cf2 //    [self downloadImage:@""];\cf0 \
+    \
+    \cf2 // 2. 
+\f1 \'b7\'c5\'b5\'bd\'b6\'d3\'c1\'d0
+\f0 \cf0 \
+    \cf3 NSOperationQueue\cf0  *q = [[\cf3 NSOperationQueue\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \cf2 // 
+\f1 \'d6\'bb\'d2\'aa\'b0\'d1\'b2\'d9\'d7\'f7\'cc\'ed\'bc\'d3\'b5\'bd\'b6\'d3\'c1\'d0\'a3\'ac
+\f0  ---
+\f1 \'bb\'e1\'d7\'d4\'b6\'af\'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0\'b5\'f7\'b6\'c8\'b7\'bd\'b7\'a8
+\f0 \cf0 \
+    [q \cf6 addOperation\cf0 :op];\
+\}\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf9 #pragma mark - 
+\f1 \'ba\'c4\'ca\'b1\'b2\'d9\'d7\'f7
+\f0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf0 - (\cf4 void\cf0 )downloadImage:(\cf4 id\cf0 )obj\
+\{\
+    \cf6 NSLog\cf0 (\cf7 @"%@---%@"\cf0 , [\cf3 NSThread\cf0  \cf6 currentThread\cf0 ], obj);}

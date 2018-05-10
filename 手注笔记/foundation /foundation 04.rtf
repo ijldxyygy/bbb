@@ -1,0 +1,263 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red92\green38\blue153;\red46\green13\blue110;\red196\green26\blue22;
+\red170\green13\blue145;\red0\green116\blue0;\red63\green110\blue116;\red38\green71\blue75;\red0\green128\blue0;
+\red43\green131\blue159;\red163\green21\blue21;\red0\green0\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19980\viewh12820\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs72 \cf0 NSSet 
+\f1 \'b1\'e9\'c0\'fa
+\f0 \
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf0 \CocoaLigature0       \cf2 NSSet\cf0  *set = [\cf2 NSSet\cf0  \cf3 setWithObjects\cf0 :\cf4 @"1"\cf0 ,\cf4 @"2"\cf0 ,\cf4 @"3"\cf0 , \cf5 nil\cf0 ];\
+        \cf6 //
+\f1 \'b1\'e9\'c0\'fa
+\f2 \cf0 \
+        \cf6 //a.forin
+\f1 \'bf\'ec\'cb\'d9\'c3\'b6\'be\'d9
+\f2 \cf0 \
+        \cf6 /*\
+        for (NSString *str in set) \{\
+            NSLog(@"str:%@",str);\
+        \}*/\cf0 \
+        \cf6 //b.
+\f1 \'b5\'fc\'b4\'fa\'c6\'f7\'b1\'e9\'c0\'fa
+\f2 \cf0 \
+        \cf2 NSEnumerator\cf0  *enumerator = [set \cf3 objectEnumerator\cf0 ];\
+        \cf2 NSString\cf0  *str = \cf5 nil\cf0 ;\
+        \cf5 while\cf0  (str = [enumerator \cf3 nextObject\cf0 ]) \{\
+            \cf3 NSLog\cf0 (\cf4 @"str:%@"\cf0 ,str);
+\f0\fs72 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1 \cf0 \'b4\'b4\'bd\'a8\'cd\'a8\'d1\'b6\'c2\'bc
+\f0 \
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf0 \CocoaLigature0       \cf6 //
+\f1 \'b4\'b4\'bd\'a8\'cd\'a8\'d1\'b6\'c2\'bc
+\f2 \cf0 \
+        \cf7 TRTelphoneInfo\cf0  *telphoneInfo = [[\cf7 TRTelphoneInfo\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];\
+        \cf6 //
+\f1 \'b4\'b4\'bd\'a8\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+        \cf7 TRUserInfo\cf0  *userInfo1 = [\cf7 TRUserInfo\cf0  \cf8 userInfoWithName\cf0 :\cf4 @"zhangsan"\cf0  \cf8 andTelphone\cf0 :\cf4 @"13700000000"\cf0  \cf8 andEmail\cf0 :\cf4 @"137@163.com"\cf0 ];\
+        \cf7 TRUserInfo\cf0  *userInfo2 = [\cf7 TRUserInfo\cf0  \cf8 userInfoWithName\cf0 :\cf4 @"lisi"\cf0  \cf8 andTelphone\cf0 :\cf4 @"13800000000"\cf0  \cf8 andEmail\cf0 :\cf4 @"138@163.com"\cf0 ];\
+        \cf7 TRUserInfo\cf0  *userInfo3 = [\cf7 TRUserInfo\cf0  \cf8 userInfoWithName\cf0 :\cf4 @"wangwu"\cf0  \cf8 andTelphone\cf0 :\cf4 @"13900000000"\cf0  \cf8 andEmail\cf0 :\cf4 @"139@163.com"\cf0 ];\
+        \cf7 TRUserInfo\cf0  *userInfo4 = [\cf7 TRUserInfo\cf0  \cf8 userInfoWithName\cf0 :\cf4 @"zhaoliu"\cf0  \cf8 andTelphone\cf0 :\cf4 @"13300000000"\cf0  \cf8 andEmail\cf0 :\cf4 @"133@163.com"\cf0 ];\
+        \cf6 //
+\f1 \'bd\'ab\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2\'cc\'ed\'bc\'d3\'b5\'bd\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0
+\f2 \cf0 \
+        [telphoneInfo \cf8 addUserInfo\cf0 :userInfo1];\
+        [telphoneInfo \cf8 addUserInfo\cf0 :userInfo2];\
+        [telphoneInfo \cf8 addUserInfo\cf0 :userInfo3];\
+        [telphoneInfo \cf8 addUserInfo\cf0 :userInfo4];\
+        \cf6 //
+\f1 \'b2\'e9\'bf\'b4\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0\'cb\'f9\'d3\'d0\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+\cf6 //        [telphoneInfo showAllUserInfos];\cf0 \
+        \cf6 //
+\f1 \'b2\'e9\'bf\'b4\'c4\'b3\'b8\'f6\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+        [telphoneInfo \cf8 lookupUserInfoByUserName\cf0 :\cf4 @"zhangsan"\cf0 ];\
+        \cf6 //
+\f1 \'c9\'be\'b3\'fd\'c4\'b3\'b8\'f6\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+        \cf6 //[telphoneInfo removeUserInfoByUserName:@"zhangsan"];\cf0 \
+        \cf6 //
+\f1 \'b2\'e9\'bf\'b4\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0\'cb\'f9\'d3\'d0\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+\cf6 //        [telphoneInfo showAllUserInfos];\cf0 \
+\cf6 //        printf("=======================\\n");\cf0 \
+        \cf6 //
+\f1 \'b2\'e9\'bf\'b4\'b0\'b4\'d0\'d5\'c3\'fb\'c5\'c5\'ba\'c3\'d0\'f2\'b5\'c4\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f2 \cf0 \
+\cf6 //        [telphoneInfo showSortedAllUserInfosByNames];
+\f0\fs72 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 1.NSMutableSet \
+					
+\f2\fs60 \cf9 \CocoaLigature0 //
+\f1 \'b4\'b4\'bd\'a8\'bc\'af\'ba\'cf
+\f2 \cf0 \
+\pard\tx1444\pardeftab1444\pardirnatural
+\cf0         \cf10 NSMutableSet\cf0  *mSet = [\cf10 NSMutableSet\cf0  \cf10 set\cf0 ];\
+        \cf9 //
+\f1 \'cc\'ed\'bc\'d3\'d4\'aa\'cb\'d8
+\f2 \cf0 \
+        [mSet \cf10 addObject\cf0 :\cf11 @"1"\cf0 ];\
+        \cf9 //
+\f1 \'c9\'be\'b3\'fd\'d4\'aa\'cb\'d8
+\f2 \cf0 \
+        \cf9 //[mSet removeObject:@"3"];\cf0 \
+        \cf10 NSMutableSet\cf0  *mSet2 = [\cf10 NSMutableSet\cf0  \cf10 setWithObjects\cf0 :\cf11 @"1"\cf0 ,\cf11 @"one"\cf0 ,\cf11 @"two"\cf0 , \cf12 nil\cf0 ];\
+        \cf9 //
+\f1 \'c7\'f3\'c1\'bd\'b8\'f6\'bc\'af\'ba\'cf\'b5\'c4\'bd\'bb\'bc\'af
+\f2 \cf0 \
+        \cf9 //[mSet intersectSet:mSet2];\cf0 \
+        \cf9 //
+\f1 \'c7\'f3\'c1\'bd\'b8\'f6\'bc\'af\'ba\'cf\'b5\'c4\'b2\'a2\'bc\'af
+\f2 \cf0 \
+        \cf9 //[mSet unionSet:mSet2];\cf0 \
+        \cf9 //
+\f1 \'b8\'f9\'be\'dd\'bc\'af\'ba\'cf\'c9\'be\'b3\'fd\'c1\'ed\'cd\'e2\'d2\'bb\'b8\'f6\'bc\'af\'ba\'cf\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8
+\f2 \cf0 \
+        [mSet \cf10 minusSet\cf0 :mSet2];//
+\f1 \'ba\'c3\'cf\'f1\'bd\'bb\'ba\'cd\'b2\'a2\'b5\'c4\'bd\'e1\'b9\'fb \'bb\'e1\'cc\'e6\'bb\'bb\'ba\'cd\'b2\'d9\'d7\'f7\'b5\'f4\'c7\'b0\'d2\'bb\'b8\'f6\'ba\'cf\'bc\'af
+\f2 \
+2.NSDictionary\
+	a.NSDictionary
+\f1 \'b5\'c4\'b8\'c5\'ca\'f6
+\f2  \'a0\
+		-  
+\f1 \'ca\'c7\'d3\'c9\'bc\'fc
+\f2 -
+\f1 \'d6\'b5\'b6\'d4\'d7\'e9\'ba\'cf\'b5\'c4\'bc\'af\'ba\'cf
+\f2 ,
+\f1 \'d5\'fd\'c8\'e7
+\f2 ,
+\f1 \'ce\'d2\'d4\'da\'b2\'e9\'d1\'af\'d7\'d6\'b5\'e4\'b5\'c4\'b5\'a5\'b4\'ca\'b5\'c4\'b6\'a8
+\f2 \
+
+\f1 			\'d2\'e5\'d2\'bb\'d1\'f9\'a1\'a3
+\f2 Key-value \'a0\
+		-  
+\f1 \'cd\'a8\'b9\'fd
+\f2 key(
+\f1 \'bc\'fc
+\f2 ),
+\f1 \'cf\'e0\'d3\'a6\'b5\'c4
+\f2 value(
+\f1 \'d6\'b5
+\f2 )
+\f1 \'a1\'a3\'cd\'a8\'b3\'a3\'c0\'b4\'bd\'b2
+\f2 ,key
+\f1 \'b5\'c4\'d6\'b5\'ca\'c7\'d7\'d6
+\f2 \
+
+\f1 			\'b7\'fb\'b4\'ae\'c0\'e0\'d0\'cd
+\f2 ,value
+\f1 \'b5\'c4\'d6\'b5\'ca\'c7\'c8\'ce\'d2\'e2\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'a1\'a3
+\f2  \'a0\
+		-  key
+\f1 \'d6\'b5\'ca\'c7\'b2\'bb\'d4\'ca\'d0\'ed\'d6\'d8\'b8\'b4\'b5\'c4
+\f2 ,value
+\f1 \'b5\'c4\'d6\'b5\'ca\'c7\'bf\'c9\'d2\'d4\'d6\'d8\'b8\'b4\'b5\'c4\'a1\'a3
+\f2  \'a0 \
+		-  
+\f1 \'cd\'a8\'c0\'b4\'c0\'b4\'bd\'b2
+\f2 key
+\f1 \'d3\'eb
+\f2 value
+\f1 \'b5\'c4\'d6\'b5
+\f2 ,
+\f1 \'b2\'bb\'d4\'ca\'d0\'ed\'ce\'aa\'bf\'d5
+\f2  \'a0\
+		-  
+\f1 \'bf\'c9\'d2\'d4\'b1\'a3\'b4\'e6\'b6\'e0\'cc\'f5\'ca\'fd\'be\'dd\'a1\'a3
+\f2  \'a0\
+	b.
+\f1 \'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4\'b6\'d4\'cf\'f3\
+		
+\f2 \cf10 NSDictionary\cf0  *dic = [\cf10 NSDictionary\cf0  \cf10 dictionaryWithObjectsAndKeys\cf0 :\cf11 @"one"\cf0 ,\cf11 @"1"\cf0 ,\cf11 @"two"\cf0 ,\cf11 @"2"\cf0 ,\cf11 @"three"\cf0 ,\cf11 @"3"\cf0 ,\cf11 @"three"\cf0 ,\cf11 @"4"\cf0 , \cf12 nil\cf0 ];\
+	c.
+\f1 \'cd\'a8\'b9\'fd\'ca\'fd\'d7\'e9\'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4\'b6\'d4\'cf\'f3
+\f2 \
+		NSArray \'a0*objects \'a0= \'a0@[stu, \'a0stu1]; \'a0\
+		NSArray \'a0*keys \'a0= \'a0@[@"1", \'a0@"2"]; \'a0 	\
+		NSDictionary \'a0*dict1 \'a0= \'a0[NSDictionary \'a0 dictionaryWithObjects:objects \'a0forKeys:keys]; \
+	d.
+\f1 \'cd\'a8\'b9\'fd\'d2\'d1\'d3\'d0\'d7\'d6\'b5\'e4\'b4\'b4\'bd\'a8\'d0\'c2\'b5\'c4\'d7\'d6\'b5\'e4
+\f2 \
+		NSDictionary \'a0*dict \'a0= \'a0[NSDictionary \'a0 dictionaryWithObjectsAndKeys:stu, \'a0@"1", \'a0stu1, \'a0@"2", \'a0nil]; \'a0 \
+		NSDictionary \'a0*dict2 \'a0= \'a0[NSDictionary \'a0 dictionaryWithDictionary:dict]; \'a0\
+	e.
+\f1 \'bb\'f1\'c8\'a1\'d7\'d6\'b5\'e4\'d6\'d0 \'bc\'fc\'d6\'b5\'b6\'d4\'b5\'c4\'b8\'f6\'ca\'fd
+\f2 \
+		NSDictionary \'a0*dict \'a0= \'a0[NSDictionary \'a0 dictionaryWithObjectsAndKeys:stu, \'a0@"1", \'a0stu1, \'a0@"2", \'a0nil]; \'a0 NSLog(@"%@", \'a0dict \'a0count]; \'a0\'a0\
+	f.
+\f1 \'b5\'c3\'b5\'bd\'d7\'d6\'b5\'e4\'d6\'d0\'cb\'f9\'d3\'d0\'b5\'c4
+\f2 key\
+		NSArray \'a0*keys \'a0= \'a0[dict \'a0allKeys]; \'a0\
+	g.
+\f1 \'b8\'f9\'be\'dd
+\f2 key
+\f1 \'d6\'b5\'b5\'c3\'b5\'bd\'cf\'e0\'d3\'a6\'b5\'c4
+\f2 value
+\f1 \'d6\'b5
+\f2 \
+		id value = [dict objectForKey:key];\
+	\
+	
+\f1 \'c1\'b7\'cf\'b0\'a3\'ba\'b1\'e9\'c0\'fa\'d7\'d6\'b5\'e4\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8
+\f2 ?\
+
+\fs72 3.
+\f1 \'ce\'c4\'bc\'fe\'b5\'c4\'b6\'c1\'c8\'a1\'b2\'d9\'d7\'f7\
+	\'ba\'dc\'b6\'e0\'b5\'c4\'cf\'b5\'cd\'b3\'b5\'c4\'c0\'e0\'a3\'ac\'b6\'bc\'cc\'e1\'b9\'a9\'c1\'cb\'a3\'ac\'ce\'c4\'bc\'fe\'b6\'c1\'c8\'a1\'b9\'a6\'c4\'dc\'a1\'a3\
+	NSString\'a1\'a2NSArray\'a1\'a2NSSet\'a1\'a2NSDictionary\'a1\'ad
+\f2\fs60 \
+		\cf9 /* 
+\f1 \'d0\'b4\'b2\'d9\'d7\'f7
+\f2 \
+        NSArray *array = @[@"one",@"two",@"three"];\
+        [array writeToFile:@"/Users/tarena/Desktop/test4.txt" atomically:NO];\
+        */\cf0 \
+        \cf9 // 
+\f1 \'b6\'c1\'b2\'d9\'d7\'f7
+\f2 \cf0 \
+        \cf10 NSArray\cf0  *array2 = [\cf10 NSArray\cf0  \cf10 arrayWithContentsOfFile\cf0 :\cf11 @"/Users/tarena/Desktop/test4.txt"\cf0 ];\
+        \cf10 NSLog\cf0 (\cf11 @"array2:%@"\cf0 ,array2);\
+4.Block 
+\f1 \'b4\'fa\'c2\'eb\'bf\'e9
+\f2 (
+\f1 \'b4\'fa\'c2\'eb\'b6\'ce
+\f2 )\
+	Block
+\f1 \'b5\'c4\'b8\'c5\'ca\'f6
+\f2  \'a0\
+		-  Block
+\f1 \'b7\'e2\'d7\'b0\'d2\'bb\'b6\'ce\'b4\'fa\'c2\'eb
+\f2 ,
+\f1 \'bf\'c9\'d2\'d4\'d4\'da\'c8\'ce\'ba\'ce\'ca\'b1\'ba\'f2\'d6\'b4\'d0\'d0
+\f2 ,Block
+\f1 \'bf\'c9
+\f2 \
+   		
+\f1 \'d2\'d4\'d7\'f6\'ce\'aa\'ba\'af\'ca\'fd\'b2\'ce\'ca\'fd\'bb\'f2\'ba\'af\'ca\'fd\'b5\'c4\'b7\'b5\'bb\'d8\'d6\'b5
+\f2 ,
+\f1 \'b6\'f8\'b1\'be\'c9\'ed\'d3\'d6\'bf\'c9\'d2\'d4\'b4\'f8\'ca\'e4\
+	
+\f2 	
+\f1 \'c8\'eb\'b2\'ce\'ca\'fd\'bb\'f2\'b7\'b5\'bb\'d8\'d6\'b5
+\f2 ,
+\f1 \'cb\'fc\'ba\'cd\'b4\'ab\'cd\'b3\'b5\'c4\'ba\'af\'ca\'fd\'d6\'b8\'d5\'eb\'cf\'e0\'c0\'e0\'cb\'c6\'a1\'a3\
+
+\fs72 5.runtime\'bc\'f2\'bd\'e9\
+	\'d4\'daOC\'d3\'ef\'d1\'d4\'d6\'d0\'a3\'ac\'d0\'ed\'b6\'e0\'b9\'a4\'d7\'f7\'ca\'c7\'d4\'da\'d4\'cb\'d0\'d0\'ca\'b1\'d6\'b4\'d0\'d0\'b5\'c4\'a3\'ac\'cb\'f9\'d2\'d4\'bd\'f6\'d3\'d0\'b1\'e0\'d2\'eb\'c6\'f7\'bb\'b9\'b2\'bb\'d0\'d0\'a3\'ac\'d0\'e8\'d2\'aaruntime(\'d4\'cb\'d0\'d0\'ca\'b1\'cf\'b5\'cd\'b3)\'c0\'b4\'d6\'b4\'d0\'d0\'b1\'e0\'d2\'eb\'ba\'f3\'b5\'c4\'b4\'fa\'c2\'eb\'a1\'a3\
+	\
+	NSClassFromString	      	\'b8\'f9\'be\'dd\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d6\'b5\'b4\'b4\'bd\'a8\'c0\'e0\'b6\'d4\'cf\'f3\
+	NSSelectorFromString       \'b8\'f9\'be\'dd\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d6\'b5\'b4\'b4\'bd\'a8\'b7\'bd\'b7\'a8
+\fs60 \
+	\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f2 \
+\
+\
+\
+\
+\
+\
+\
+}

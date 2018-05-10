@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red43\green131\blue159;\red163\green21\blue21;
+\red216\green37\blue39;\red255\green0\blue50;\red0\green0\blue255;\red255\green0\blue73;\red92\green38\blue153;
+\red46\green13\blue110;\red196\green26\blue22;\red223\green0\blue44;\red0\green116\blue0;\red170\green13\blue145;
+\red255\green0\blue54;\red63\green110\blue116;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25740\viewh13120\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs72 \cf0 1.NSMutableString\
+	a.
+\f1 \'b4\'b4\'bd\'a8\'bf\'c9\'b1\'e4\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\
+		NSMutableString *mString = [[NSMutableString alloc]init];\
+	b.\'cf\'f2\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\'d6\'d0\'cc\'ed\'bc\'d3\'d4\'aa\'cb\'d8\
+		
+\f2 \cf2 \CocoaLigature0 //a.
+\f1 \'cf\'f2\'d2\'d1\'d3\'d0\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\'d6\'d0
+\f2  
+\f1 \'cc\'ed\'bc\'d3\'d4\'aa\'cb\'d8
+\f2 \cf0 \
+\pard\tx1444\pardeftab1444\pardirnatural
+\cf0    \cf2 //
+\f1 \'b2\'ce\'ca\'fd
+\f2 1 
+\f1 \'cc\'ed\'bc\'d3\'b5\'c4\'c4\'da\'c8\'dd
+\f2  
+\f1 \'b2\'ce\'ca\'fd
+\f2 2 
+\f1 \'ce\'bb\'d6\'c3\cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 		
+\f2 \CocoaLigature0 [str2 \cf3 insertString\cf0 :\cf4 @"123"\cf0  \cf3 atIndex\cf0 :2];\
+\pard\tx1444\pardeftab1444\pardirnatural
+\cf0    \cf2 //
+\f1 \'d4\'da\'d4\'ad\'d3\'d0\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'ba\'f3\'c3\'e6\'d7\'b7\'bc\'d3\'c4\'da\'c8\'dd
+\f2 \cf0 \
+   [str2 \cf3 appendString\cf0 :\cf4 @"World"\cf0 ];\
+   \cf2 //
+\f1 \'d4\'da\'d4\'ad\'d3\'d0\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'ba\'f3\'c3\'e6\'b0\'b4\'d6\'b8\'b6\'a8\'b8\'f1\'ca\'bd\'d7\'b7\'bc\'d3\'c4\'da\'c8\'dd
+\f2 \cf0 \
+   \cf2 //[str2 appendFormat:<#(NSString *), ...#>];
+\f1 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 	c.\'cf\'f2\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\'d6\'d0\cf5 \'c9\'be\'b3\'fd\cf0 \'d4\'aa\'cb\'d8\
+		
+\f2 \CocoaLigature0 [str3 \cf3 deleteCharactersInRange\cf0 :r];
+\f1 \CocoaLigature1 \
+	d.\'cf\'f2\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3\'d6\'d0\cf5 \'cc\'e6\'bb\'bb\cf0 \'d4\'aa\'cb\'d8\
+		
+\f2 \CocoaLigature0 [str4 \cf6 replace\cf3 CharactersInRange\cf0 :r2 \cf3 withString\cf0 :\cf4 @"12345"\cf0 ];
+\f1 \CocoaLigature1 \
+2.\cf6 NSNumber\cf0 \
+	\cf2 \CocoaLigature0 \'d4\'da
+\f2 OC
+\f1 \'d6\'d0\'a3\'ac\'ba\'dc\'b6\'e0\'b5\'d8\'b7\'bd\'a3\'ac\'ca\'c7\'b2\'bb\'d6\'a7\'b3\'d6\'d6\'b1\'bd\'d3\'ca\'b9\'d3\'c3\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'b5\'c4\
+	\'d0\'e8\'d2\'aa\'bd\'ab\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb\'b3\'c9\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\
+	
+\f2 //
+\f1 \'b7\'e2\'d7\'b0
+\f2 \cf0 \
+\pard\tx1444\pardeftab1444\pardirnatural
+\cf0   \cf7 int\cf0  i = 10;\
+  \cf3 NSNumber\cf0  *num = [\cf3 NSNumber\cf0  \cf3 numberWithInt\cf0 :i];\
+  \cf2 //
+\f1 \'b2\'f0\'b7\'e2
+\f2 \cf0 \
+  \cf7 int\cf0  i2 = [num \cf3 intValue\cf0 ];\
+3.NSValue\
+  
+\f1 \'bf\'c9\'d2\'d4\'d7\'aa\'bb\'bb
+\f2 C
+\f1 \'d3\'ef\'d1\'d4\'d6\'d0\cf8 \'d7\'d4\'b6\'a8\'d2\'e5\'c0\'e0\'d0\'cd\'ce\'aa\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\cf0 \'a1\'a3\
+     		
+\f2\fs60 \cf3 TRPoint\cf0  p = \{3,4\};\cf2 //
+\f1 \'bf\'aa\'b1\'d9\'d2\'bb\'b8\'f6\'bd\'e1\'b9\'b9\'cc\'e5\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4\'a3\'ac\'b2\'a2\'b8\'b3\'d6\'b5
+\f2 \cf0 \
+        \cf2 //
+\f1 \'b7\'e2\'d7\'b0
+\f2 \cf0 \
+        \cf2 //@encode(TRPoint)
+\f1 \'d3\'eb
+\f2 @selector
+\f1 \'cf\'e0\'c0\'e0\'cb\'c6
+\f2 \cf0 \
+        \cf3 NSValue\cf0  *value = [\cf3 NSValue\cf0  \cf3 valueWithBytes\cf0 :&p \cf3 objCType\cf0 : \cf7 @encode\cf0 (\cf3 TRPoint\cf0 )];\
+        \cf2 //
+\f1 \'b2\'f0\'b7\'e2
+\f2 \cf0 \
+        \cf3 TRPoint\cf0  p2;\cf2 //
+\f1 \'bf\'aa\'b1\'dc\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4
+\f2 \cf0 \
+        [value \cf3 getValue\cf0 :&p2];\cf2 //
+\f1 \'bd\'ab\'b6\'d1\'d6\'d0\'b5\'c4\'ca\'fd\'be\'dd\'b7\'c5\'b5\'bd\'d5\'bb\'d6\'d0
+\f2 \cf0 \
+        \cf3 NSLog\cf0 (\cf4 @"p2 x:%d y:%d"\cf0 ,p2.\cf3 x\cf0 ,p2.\cf3 y\cf0 );
+\fs72 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1 \cf0 \CocoaLigature1 4.NSDate\'c8\'d5\'c6\'da	\
+	NSDate\'d3\'c3\'c0\'b4\'b1\'a3\'b4\'e6\'ca\'b1\'bc\'e4\'d0\'c5\'cf\'a2\'a3\'ac\'c4\'ac\'c8\'cf\'b5\'c4\'ca\'b1\'bc\'e4\'ce\'aa\'ca\'c0\'bd\'e7\'b1\'ea\'d7\'bc\'ca\'b1\'bc\'e4UTC\'a1\'a3\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf0 \CocoaLigature0  \cf9 NSDate\cf0  *date = [[\cf9 NSDate\cf0  \cf10 alloc\cf0 ]\cf10 init\cf0 ];\
+        \cf10 NSLog\cf0 (\cf11 @"%@"\cf0 ,date);
+\f1\fs72 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 5.NSDateFormatter\
+	\'bd\'e2\'be\'f6\'ca\'b1\'bc\'e4\'cf\'d4\'ca\'be\'b5\'c4\'b8\'f1\'ca\'bd\'ce\'ca\'cc\'e2\'a3\'ac\'bd\'e2\'be\'f6\'ca\'b1\'bc\'e4\'ca\'b1\'c7\'f8\'b8\'f1\'ca\'bd\'ce\'ca\'cc\'e2\'a1\'a3\
+					
+\f2\fs60 \cf2 \CocoaLigature0 //
+\f1 \'b5\'c3\'b5\'bd\'b5\'b1\'c7\'b0\'ca\'b1\'bc\'e4
+\f2 \cf0 \
+\pard\tx1444\pardeftab1444\pardirnatural
+\cf0         \cf3 NSDate\cf0  *now2 = [[\cf3 NSDate\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];\
+        \cf2 //
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'b1\'bc\'e4\'c4\'a3\'b0\'e5\'b6\'d4\'cf\'f3
+\f2 \cf0 \
+        \cf3 NSDateFormatter\cf0  *df = [[\cf3 NSDateFormatter\cf0  \cf3 alloc\cf0 ]\cf3 init\cf0 ];\
+        \cf2 //
+\f1 \'ca\'b1\'bc\'e4\'b8\'f1\'ca\'bd\'ca\'f4\'d0\'d4
+\f2 \cf0 \
+        \cf2 //yyyy
+\f1 \'c4\'ea
+\f2 MM
+\f1 \'d4\'c2
+\f2 dd
+\f1 \'c8\'d5
+\f2  hh
+\f1 \'ca\'b1
+\f2 mm
+\f1 \'b7\'d6
+\f2 ss
+\f1 \'c3\'eb
+\f2  HH24
+\f1 \'ca\'b1
+\f2 \cf0 \
+        df.\cf3 dateFormat\cf0  = \cf4 @"hh
+\f1 \'d0\'a1\'ca\'b1
+\f2 mm
+\f1 \'b7\'d6\'d6\'d3
+\f2 ss
+\f1 \'c3\'eb
+\f2  yyyy-MM-dd"\cf0 ;\
+        \cf2 //
+\f1 \'b8\'f9\'be\'dd\'ca\'b1\'bc\'e4\'b6\'d4\'cf\'f3\'a3\'ac\'d7\'aa\'bb\'bb\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae
+\f2 \cf0 \
+        \cf2 //
+\f1 \'d7\'d4\'b6\'af\'d7\'aa\'bb\'bb\'b3\'c9\'b5\'b1\'c7\'b0\'ca\'b1\'c7\'f8
+\f2 \cf0 \
+        \cf3 NSString\cf0  *strDate = [df \cf3 stringFromDate\cf0 :now2];\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs72 \cf0 \CocoaLigature1 6.NSArray (\'b2\'bb\'bf\'c9\'b1\'e4\'ca\'fd\'d7\'e9)\
+	\'bf\'c9\'d2\'d4\'b1\'a3\'b4\'e6\'d2\'bb\'d7\'e9\'ca\'fd\'be\'dd\'a1\'a3\
+	\'d3\'ebC\'d3\'ef\'d1\'d4\'d6\'d0\'b5\'c4\'ca\'fd\'d7\'e9\'cf\'e0\'cd\'ac\'b5\'e3\'a3\'ba\'b6\'bc\'ca\'c7\'cd\'a8\'b9\'fd\'cf\'c2\'b1\'ea\'b7\'c3\'ce\'ca\'ca\'fd\'d7\'e9\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'a3\'ac\'b2\'a2\'c7\'d2NSArray\'ca\'c7\'b2\'bb\'bf\'c9\'b1\'e4\'ca\'fd\'d7\'e9\'a1\'a3\
+	\'d3\'ebC\'d3\'ef\'d1\'d4\'d6\'d0\'b5\'c4\'ca\'fd\'d7\'e9\'b2\'bb\'cd\'ac\'b5\'e3\'a3\'baOC\'d6\'d0\'b5\'c4\'ca\'fd\'d7\'e9\'ca\'c7\'d3\'d0\'d0\'f2\'b5\'c4\'a3\'ac\'b2\'a2\'c7\'d2\'b1\'a3\'b4\'e6\'b5\'c4\'d4\'aa\'cb\'d8\'c0\'e0\'d0\'cd\'b1\'d8\'d0\'eb\'ca\'c7\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'a1\'a3\
+	a.\'b4\'b4\'bd\'a8\'ca\'fd\'d7\'e9\'b6\'d4\'cf\'f3\
+		NSArray *array = [[NSArray alloc]init];//int array[0];\
+		NSArray *array = [[NSArray alloc]\cf12 initWithObjects:str1,str2,str3,nil\cf0 ]//int array[3] = \{1,2,3\};\
+	b.\
+\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf13 \CocoaLigature0 //
+\f1 \'b1\'c8\'bd\'cf\'b9\'e6\'d4\'f2
+\f2  
+\f1 \'b1\'c8\'bd\'cf\'c1\'bd\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b9\'e6\'d4\'f2
+\f2 \cf0 \
+        \cf13 //NSComparisonResult cr = [str compare:str2];\cf0 \
+        \cf14 SEL\cf0  sel = \cf14 @selector\cf0 (compare:);\
+        \cf13 //
+\f1 \'bd\'f8\'d0\'d0\'c1\'bd\'c1\'bd\'b1\'c8\'bd\'cf
+\f2 \cf0 \
+        \cf9 NSArray\cf0  *sortedArray = [array \cf10 sortedArrayUsingSelector\cf0 :sel];\
+\pard\tx626\pardeftab626\pardirnatural
+\cf10 NSLog\cf0 (\cf11 @"sortedArray:%@"\cf0 ,sortedArray);
+\f1\fs72 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 7.\'ca\'fd\'d7\'e9\'b5\'c4\'c5\'c5\'d0\'f2  (\'b2\'bb\'b6\'ae)\
+	OC\'d6\'d0\'b5\'c4\'ca\'fd\'d7\'e9\'a3\'ac\'ca\'c7\'d6\'a7\'b3\'d6\'b6\'d4\'ca\'fd\'d7\'e9\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'bd\'f8\'d0\'d0\'c5\'c5\'d0\'f2\'a1\'a3\
+	\'ca\'fd\'d7\'e9\'d6\'d0\'c5\'c5\'d0\'f2\'b5\'c4\'d4\'aa\'cb\'d8\'c4\'da\'c8\'dd\'b1\'d8\'d0\'eb\'cd\'b3\'d2\'bb\'a1\'a3\
+	\'ca\'b9\'d3\'c3\cf15 sortedArrayUsingSelecto\cf0 r...\'bd\'f8\'d0\'d0\'c5\'c5\'d0\'f2\'a1\'a3\
+	\'ca\'fd\'d7\'e9\'d6\'d0\'d4\'aa\'cb\'d8\'b1\'d8\'d0\'eb\'cc\'ed\'bc\'d3\'b1\'c8\'bd\'cf\'b7\'bd\'b7\'a8\'a1\'a3(\'c5\'c5\'d0\'f2\'b9\'e6\'d4\'f2)\
+\
+	\'b2\'d9\'d7\'f7\'b2\'bd\'d6\'e8\'a3\'ba\
+		1.\'d6\'c6\'b6\'a8\cf15 \'c5\'c5\'d0\'f2\'b9\'e6\'d4\'f2\cf0 \
+			-(NSComparisonResult)compare:(id)otherObj;\
+\
+			NSComparisonResult\
+				NSOrderedAscending    -1      \'c7\'b0\'c3\'e6\'b5\'c4\'ca\'fd\'d0\'a1\'d3\'da\'ba\'f3\'c3\'e6\'b5\'c4\'ca\'fd\
+				NSOrderedSame              0       \'c7\'b0\'c3\'e6\'b5\'c4\'ca\'fd\'b5\'c8\'d3\'da\'ba\'f3\'c3\'e6\'b5\'c4\'ca\'fd\
+				NSOrderedDescending  1       \'c7\'b0\'c3\'e6\'b5\'c4\'ca\'fd\'b4\'f3\'d3\'da\'ba\'f3\'c3\'e6\'b5\'c4\'ca\'fd\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf0 \CocoaLigature0 -(\cf9 NSComparisonResult\cf0 )compareName:(\cf16 TRStudent\cf0 *)otherStudent\{\
+    \cf13 // 
+\f1 \'b6\'d4\'d1\'a7\'c9\'fa\'b5\'c4\'d0\'d5\'c3\'fb\'c5\'c5\'d0\'f2
+\f2 ->
+\f1 \'b6\'d4\'d7\'d6\'b7\'fb\'b4\'ae\'bd\'f8\'d0\'d0\'c5\'c5\'d0\'f2
+\f2 \cf0 \
+    \cf14 return\cf0  [\cf14 self\cf0 .\cf16 name\cf0  \cf10 compare\cf0 :otherStudent.\cf16 name\cf0 ];  
+\f1 \'d7\'d6\'b7\'fb\'b4\'ae\'b1\'c8\'bd\'cf\'d3\'c3
+\f2 compare\
+\}\
+\pard\tx626\pardeftab626\pardirnatural
+\cf13 //
+\f1 \'b0\'b4\'c4\'ea\'c1\'e4\'c5\'c5\'d0\'f2
+\f2 \cf0 \
+-(\cf9 NSComparisonResult\cf0 )compare:(\cf16 TRStudent\cf0 *)otherStudent\{\
+    \cf13 //
+\f1 \'c8\'e7\'b9\'fb\'cf\'eb\'bd\'b5\'d0\'f2\'c5\'c5\'d0\'f2\'a3\'ac\'d6\'bb\'d0\'e8\'d4\'da\'bd\'e1\'b9\'fb\'c7\'b0\'bc\'d3\'c8\'eb
+\f2 "-"
+\f1 \'ba\'c5
+\f2 \cf0 \
+    \cf13 /* 
+\f1 \'bf\'c9\'d2\'d4\'bd\'ab\'c4\'ea\'c1\'e4\'bd\'f8\'d0\'d0\'b7\'e2\'d7\'b0
+\f2  NSNumber
+\f1 \'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0\'c5\'c5\'d0\'f2
+\f2 */\cf0 \
+    \cf9 NSNumber\cf0  *n1 = [\cf9 NSNumber\cf0  \cf10 numberWithInt\cf0 :\cf14 self\cf0 .\cf16 age\cf0 ];\
+    \cf9 NSNumber\cf0  *n2 = [\cf9 NSNumber\cf0  \cf10 numberWithInt\cf0 :otherStudent.\cf16 age\cf0 ];\
+    \cf14 return\cf0  [n1 \cf10 compare\cf0 :n2];\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1 \cf0 \CocoaLigature1 \'ca\'b9\'d3\'c3\'ca\'b1..NSArray * sorteuser = [ self.users sortedArrayUsingWelector:@selector(compare:)  ]//\'d2\'d1\'be\'ad\'c5\'c5\'ba\'c3\'c1\'cb\'b5\'c4\'ca\'fd\'d7\'e9
+\fs72 \
+\
+		2.\'bd\'f8\'d0\'d0\'c1\'bd\'c1\'bd\'b1\'c8\'bd\'cf\
+			\'ca\'c7\'ca\'fd\'d7\'e9\'cc\'e1\'b9\'a9\'b5\'c4\'c1\'bd\'c1\'bd\'b1\'c8\'bd\'cf\'a3\'ac\'d6\'b1\'bd\'d3\'d3\'c3\'be\'cd\'bf\'c9\'d2\'d4\'c1\'cb\'a3\'ac\'b5\'ab\'d4\'da\'ca\'b9\'d3\'c3\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'b1\'d8\'d0\'eb\'b4\'ab\'c8\'eb\'c5\'c5\'d0\'f2\'b9\'e6\'d4\'f2\'a1\'a3\
+			NSArray *sortedArray = [array sortedUsingSelector:SEL \'a1\'ad];\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

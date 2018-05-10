@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red63\green110\blue116;\red92\green38\blue153;
+\red0\green116\blue0;\red46\green13\blue110;\red28\green0\blue207;\red196\green26\blue22;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh10200\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs28 \cf0 UIButton 
+\f1 \'bc\'cc\'b3\'d0\'d7\'d4
+\f0 UIControl
+\f1 \'c0\'e0\
+\'b9\'a4\'b3\'a7\'b7\'bd\'b7\'a8\'bb\'f1\'b5\'c3\'ca\'b5\'c0\'fd\
+\'c9\'e8\'d6\'c3\'ca\'c7\'b5\'f7\'d3\'c3\'b7\'bd\'b7\'a8\'b2\'d9\'d7\'f7\
+UIButtonType******* \'c0\'e0\'d0\'cd\
+\'b3\'a3\'d3\'c3\'ca\'f4\'d0\'d4 frame\'d7\'f8\'b1\'ea tag \'b1\'ea\'c7\'a9  
+\f2\fs26 \cf2 \CocoaLigature0 self\cf0 .\cf3 button\cf0 .\cf4 enabled\cf0  = \cf2 YES\cf0 ;
+\f1\fs28 \CocoaLigature1 \
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs26 \cf0 \CocoaLigature0     \cf5 //1.
+\f1 \'b4\'b4\'bd\'a8
+\f2 button
+\f1 \'b6\'d4\'cf\'f3
+\f2 \cf0 \
+    \cf4 UIButton\cf0  *button = [\cf4 UIButton\cf0  \cf6 buttonWithType\cf0 :\cf6 UIButtonTypeSystem\cf0 ];\
+    \cf5 //2.
+\f1 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'b5\'c4\'ca\'f4\'d0\'d4
+\f2 \cf0 \
+    button.\cf4 frame\cf0  = \cf6 CGRectMake\cf0 (\cf7 50\cf0 , \cf7 50\cf0 , \cf7 100\cf0 , \cf7 40\cf0 );\
+    \cf5 //
+\f1 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'d4\'da\'d5\'fd\'b3\'a3\'c7\'e9\'bf\'f6\'cf\'c2\'cf\'d4\'ca\'be\'b5\'c4\'b1\'ea\'cc\'e2
+\f2 \cf0 \
+    [button \cf6 setTitle\cf0 :\cf8 @"OK"\cf0  \cf6 forState\cf0 :\cf6 UIControlStateNormal\cf0 ];\
+    \cf5 //
+\f1 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'d4\'da\'b8\'df\'c1\'c1\'d7\'b4\'cc\'ac\'cf\'c2\'cf\'d4\'ca\'be\'b5\'c4\'b1\'ea\'cc\'e2
+\f2 \cf0 \
+    [button \cf6 setTitle\cf0 :\cf8 @"KO"\cf0  \cf6 forState\cf0 :\cf6 UIControlStateHighlighted\cf0 ];\
+    button.\cf4 backgroundColor\cf0  = [\cf4 UIColor\cf0  \cf6 lightGrayColor\cf0 ];\
+    \cf5 //
+\f1 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'d4\'da\'d5\'fd\'b3\'a3\'d7\'b4\'cc\'ac\'cf\'c2\'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc
+\f2 \cf0 \
+    \cf5 //[button setBackgroundImage:[UIImage imageNamed:@"bg1.png"] forState:UIControlStateNormal];\cf0 \
+    \cf5 //
+\f1 \'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'d4\'da\'d5\'fd\'b3\'a3\'d7\'b4\'cc\'ac\'b5\'c4\'cd\'bc\'c6\'ac
+\f2 \cf0 \
+    [button \cf6 setImage\cf0 :[\cf4 UIImage\cf0  \cf6 imageNamed\cf0 :\cf8 @"bg1.png"\cf0 ] \cf6 forState\cf0 :\cf6 UIControlStateNormal\cf0 ];
+\f1\fs28 \CocoaLigature1 \
+
+\f2\fs26 \CocoaLigature0     \cf5 //
+\f1 \'ce\'aa\'b0\'b4\'c5\'a5\'cc\'ed\'bc\'d3\'ca\'c2\'bc\'fe\'b5\'c4\'cf\'ec\'d3\'a6
+\f2 \cf0 \
+    \cf5 //
+\f1 \'b4\'cb\'be\'e4\'d2\'e2\'d4\'da\'b8\'e6\'cb\'df\'cf\'b5\'cd\'b3\'a3\'ac\'c8\'e7\'b9\'fb\'bc\'ec\'b2\'e2\'b5\'bd
+\f2 button
+\f1 \'b7\'a2\'c9\'fa\'c1\'cb\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+    \cf5 //
+\f1 \'d4\'f2\'cf\'b5\'cd\'b3\'d7\'d4\'b6\'af\'b5\'f7\'d3\'c3\'b5\'b1\'c7\'b0\'b6\'d4\'cf\'f3
+\f2 self
+\f1 \'b5\'c4
+\f2 aaa
+\f1 \'b7\'bd\'b7\'a8
+\fs28 \cf0 \CocoaLigature1 \
+
+\f2\fs26 \CocoaLigature0 [button \cf6 addTarget\cf0 :\cf2 self\cf0  \cf6 action\cf0 :\cf2 @selector\cf0 (aaa:) \cf6 forControlEvents\cf0 :\cf6 UIControlEventTouchUpInside\cf0 ];\
+\cf5 //
+\f1 \'b5\'b1\'b5\'e3\'bb\'f7\'b0\'b4\'c5\'a5\'ba\'f3\'a3\'ac\'b8\'c3\'b7\'bd\'b7\'a8\'bb\'e1\'b1\'bb\'cf\'b5\'cd\'b3\'d7\'d4\'b6\'af\'b5\'f7\'d3\'c3
+\f2 \cf0 \
+\cf5 //
+\f1 \'c7\'d2\'cf\'b5\'cd\'b3\'bb\'e1\'bd\'ab\'ca\'c2\'bc\'fe\'b5\'c4\'d4\'b4\'cd\'b7\'a3\'a8\'b5\'e3\'bb\'f7\'c1\'cb\'b5\'c4\'c4\'c7\'b8\'f6\'b0\'b4\'c5\'a5\'a3\'a9\'d7\'f7\'ce\'aa\'b2\'ce\'ca\'fd
+\f2 \cf0 \
+\cf5 //
+\f1 \'b4\'ab\'bd\'f8\'c0\'b4\'a3\'ac\'d3\'c3\'d3\'da\'ca\'c2\'bc\'fe\'cf\'ec\'d3\'a6\'b5\'c4\'b7\'bd\'b7\'a8\'d6\'bb\'c4\'dc\'d3\'d0\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd
+\f2 \cf0 \
+-(\cf2 void\cf0 )aaa:(\cf4 UIButton\cf0  *)sender\{\
+    \cf2 self\cf0 .\cf3 label\cf0 .\cf4 text\cf0  = \cf8 @"Hello Kitty"\cf0 ;\
+\}\
+\
+\
+\
+\
+\
+    \cf5 //
+\f1 \'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'cf\'d4\'ca\'be\'b0\'b4\'c5\'a5\'b5\'c4
+\f2 selected
+\f1 \'d7\'b4\'cc\'ac
+\f2 \cf0 \
+    \cf5 //
+\f1 \'d4\'f2\'d0\'de\'b8\'c4
+\f2 selected
+\f1 \'ca\'f4\'d0\'d4\'ce\'aa
+\f2 YES
+\f1 \'bc\'b4\'bf\'c9
+\f2 \cf0 \
+    \cf5 //self.button.selected = YES;\cf0 \
+    \cf5 //
+\f1 \'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'cf\'d4\'ca\'be\'b0\'b4\'c5\'a5\'b5\'c4
+\f2 disabled
+\f1 \'d7\'b4\'cc\'ac
+\f2 \cf0 \
+    \cf5 //
+\f1 \'d4\'f2\'d0\'de\'b8\'c4
+\f2 enable
+\f1 \'ca\'f4\'d0\'d4\'ce\'aa
+\f2 NO
+\f1 \'bc\'b4\'bf\'c9
+\f2 \cf0 \
+    \cf5 //
+\f1 \'cb\'f9\'d2\'d4\'b0\'b4\'c5\'a5\'b5\'c4
+\f2 selected
+\f1 \'d7\'b4\'cc\'ac\'ba\'cd
+\f2 disable
+\f1 \'d7\'b4\'cc\'ac\'d0\'e8\'d2\'aa\'cd\'a8\'b9\'fd\'c9\'e8\'d6\'c3\'ca\'f4\'d0\'d4\'b2\'c5\'bb\'e1\'c7\'d0\'bb\'bb\'b5\'bd\'d5\'e2\'b8\'f6\'d7\'b4\'cc\'ac
+\f2 \cf0 \
+    \cf5 //self.button.enabled = NO;\cf0 \
+\}\
+\
+\cf5 //
+\f1 \'b5\'e3\'bb\'f7
+\f2 \cf0 \
+\
+- (\cf2 IBAction\cf0 )changeState:(\cf4 UIButton\cf0  *)sender \{\
+    sender.\cf4 selected\cf0  = !sender.\cf4 selected\cf0 ;\
+    \cf2 if\cf0 (sender.\cf4 selected\cf0 )\{\
+        \cf6 NSLog\cf0 (\cf8 @"
+\f1 \'b2\'a5\'b7\'c5
+\f2 "\cf0 );\
+    \}\cf2 else\cf0 \{\
+        \cf6 NSLog\cf0 (\cf8 @"
+\f1 \'d4\'dd\'cd\'a3
+\f2 "\cf0 );\
+    \}\
+\}}

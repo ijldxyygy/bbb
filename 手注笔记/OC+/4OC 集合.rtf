@@ -1,0 +1,916 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red28\green0\blue207;
+\red196\green26\blue22;\red170\green13\blue145;\red46\green13\blue110;\red63\green110\blue116;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh9400\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs28 \cf2 \CocoaLigature0 key 
+\f1 \'b1\'ed\'ca\'be\'bc\'fc
+\f0 \
+  value 
+\f1 \'b1\'ed\'ca\'be\'d6\'b5
+\f0 \
+ \
+ 
+\f1 \'a1\'be\'d5\'c6\'ce\'d5\'a1\'bf\'b8\'c5\'c4\'ee\'a3\'ba\'d7\'d6\'b5\'e4\'ca\'c7\'d2\'bb\'b8\'f6\'ce\'de\'d0\'f2\'b5\'c4\'bc\'af\'ba\'cf\'a3\'ac\'cb\'fc\'ca\'b9\'cd\'a8\'b9\'fd\'bc\'fc\'d6\'b5\'b6\'d4\'b5\'c4\'b7\'bd\'ca\'bd\'c0\'b4\'b4\'e6\'b4\'a2\'ca\'fd\'be\'dd\'b5\'c4
+\f0 \
+  key
+\f1 \'ca\'c7\'d3\'d0\'d2\'aa\'c7\'f3
+\f0   NSCopying
+\f1 \'b2\'c5\'c4\'dc\'b3\'c9\'ce\'aa\'d7\'d6\'b5\'e4
+\f0 key,
+\f1 \'d2\'bb\'b0\'e3\'c7\'e9\'bf\'f6\'b6\'bc\'ca\'c7\'ca\'b9\'d3\'c3\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'f7\'ce\'aa\'d7\'d6\'b5\'e4\'b5\'c4
+\f0 key\
+  NSDictionary 
+\f1 \'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c3\'d7\'d6\'b5\'e4\'a3\'ac\'d2\'bb\'be\'ad\'b4\'b4\'bd\'a8\'c0\'ef\'c3\'e6\'b5\'c4\'d4\'aa\'cb\'d8\'be\'cd\'b2\'bb\'bf\'c9\'d2\'d4\'b8\'c4\'b1\'e4\'c1\'cb
+\f0 \
+  Person\
+  age:@10\
+  name:@\'93
+\f1 \'d5\'c5\'c8\'fd
+\f0 \'93\
+
+\f1 \'ca\'b9\'d3\'c3\'bc\'f2\'b1\'e3\'b7\'bd\'ca\'bd\'c0\'b4\'b4\'b4\'bd\'a8\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+        \cf3 NSDictionary\cf0  *dict1 = \cf4 @\{\cf5 @"age"\cf0 :\cf4 @20\cf0 ,\cf5 @"name"\cf0 :\cf5 @"apple"\cf0 ,\cf5 @"height"\cf0 :\cf4 @1.8\}\cf0 ;\
+\cf2 //      
+\f1 \'d7\'d6\'b5\'e4\'d0\'b4\'ce\'c4\'bc\'fe
+\f0 \cf0 \
+        \cf3 NSString\cf0  *path = \cf5 @"/Users/apple/Desktop/
+\f1 \'b2\'e2\'ca\'d4
+\f0 .txt"\cf0 ;\
+\cf2 //      
+\f1 \'c8\'e7\'b9\'fb\'b7\'b5\'bb\'d8
+\f0 YES
+\f1 \'b1\'ed\'ca\'be\'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6
+\f0 \cf0 \
+        \cf6 BOOL\cf0  isSuccess = [dict1 \cf7 writeToFile\cf0 :path \cf7 atomically\cf0 :\cf6 YES\cf0 ];\
+        \cf6 if\cf0 (isSuccess)\{\
+            \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+        \}\
+        \
+        \
+\cf2 //      
+\f1 \'b4\'d3\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+        \cf3 NSDictionary\cf0  *dict  =  [\cf3 NSDictionary\cf0  \cf7 dictionaryWithContentsOfFile\cf0 :path];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,dict);\
+\
+
+\f1 \cf2 \'d4\'da\'d7\'d6\'b5\'e4\'d6\'d0\'cb\'f9\'d3\'d0
+\f0 key(
+\f1 \'bc\'fc
+\f0 )
+\f1 \'b6\'bc\'ca\'c7\'ce\'a8\'d2\'bb\'b5\'c4
+\f0 \
+ 
+\f1 \'d6\'b5\'c3\'bb\'d3\'d0\'d2\'aa\'c7\'f3\'a3\'ac\'bf\'c9\'d2\'d4\'d6\'d8\'b8\'b4
+\f0 \
+ \
+ NSMutableDictionary:
+\f1 \'ca\'c7
+\f0 NSDictionary
+\f1 \'b5\'c4\'d7\'d3\'c0\'e0\'a3\'ac\'cb\'fc\'ca\'c7\'bf\'c9\'b1\'e4\'b5\'c4\'d7\'d6\'b5\'e4\'a3\'ac\'cb\'fc\'d6\'a7\'b3\'d6\'d4\'f6\'c9\'be\'b3\'fd\'b8\'c4\'b5\'c4\'b2\'d9\'d7\'f7\
+\
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0 \cf3 NSMutableDictionary\cf0  *dict  = [\cf3 NSMutableDictionary\cf0   \cf7 dictionaryWithCapacity\cf0 :\cf4 10\cf0 ];\
+\
+        \
+        \cf2 //        NSLog(@"%zd,%zd",dict.count,dict1.count);\cf0 \
+        dict.\cf7 dictionary\cf0  = \cf4 @\{\cf5 @"age"\cf0 :\cf4 @10\cf0 ,\cf5 @"name"\cf0 :\cf5 @"lisi"\cf0 ,\cf5 @"height"\cf0 :\cf4 @1.8\}\cf0 ;\
+        \
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //      
+\f1 \'ca\'d7\'cf\'c8\'d5\'d2\'b5\'bd\'d2\'aa\'c9\'be\'b3\'fd\'b5\'c4
+\f0 key
+\f1 \'b7\'bd\'d4\'da\'ca\'fd\'d7\'e9\'d6\'d0
+\f0 \cf0 \
+        \cf3 NSMutableArray\cf0  *removeKeys = [\cf3 NSMutableArray\cf0  \cf7 array\cf0 ];\
+        \cf6 for\cf0  (\cf3 NSString\cf0  *key \cf6 in\cf0  dict) \{\
+\cf2 //          
+\f1 \'d7\'a2\'d2\'e2\'d7\'d6\'b5\'e4\'d6\'d0\'b4\'e6\'b4\'a2\'b6\'bc\'ca\'c7\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+            \cf6 if\cf0  ([dict[key] \cf7 isEqual\cf0 :\cf4 @10\cf0 ]) \{\
+                [removeKeys \cf7 addObject\cf0 :key];\
+            \}\
+            \
+        \}\
+\cf2 //      
+\f1 \'c9\'be\'b3\'fd\'ca\'fd\'d7\'e9\'d6\'d0
+\f0 key
+\f1 \'b6\'d4\'d3\'a6\'b5\'c4\'bc\'fc\'d6\'b5\'b6\'d4
+\f0 \cf0 \
+        [dict \cf7 removeObjectsForKeys\cf0 :removeKeys];\
+        \
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,dict);\
+\
+\
+ \cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bf\'c9\'b1\'e4\'b5\'c4\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+    \cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bf\'d5\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+    \cf3 NSMutableDictionary\cf0  *dict = [\cf3 NSMutableDictionary\cf0  \cf7 dictionary\cf0 ];\
+    \cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'d3\'d0\'c8\'dd\'c1\'bf\'b5\'c4\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+    \cf3 NSMutableDictionary\cf0  *dict1  = [\cf3 NSMutableDictionary\cf0   \cf7 dictionaryWithCapacity\cf0 :\cf4 10\cf0 ];\
+    \cf2 //        NSLog(@"%zd,%zd",dict.count,dict1.count);\cf0 \
+    dict1.\cf7 dictionary\cf0  = \cf4 @\{\cf5 @"age"\cf0 :\cf4 @10\cf0 ,\cf5 @"name"\cf0 :\cf5 @"lisi"\cf0 ,\cf5 @"height"\cf0 :\cf4 @1.8\}\cf0 ;\
+    \
+    \cf2 //     
+\f1 \'b2\'e5\'c8\'eb\'d4\'aa\'cb\'d8
+\f0 ,
+\f1 \'c8\'e7\'b9\'fb\'d7\'d6\'b5\'e4\'d3\'d0\'d5\'e2\'b8\'f6
+\f0 key
+\f1 \'be\'cd\'ca\'c7\'d0\'de\'b8\'c4\'a3\'ac\'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'be\'cd\'b2\'e5\'c8\'eb
+\f0 \cf0 \
+    \cf2 //     
+\f1 \'b5\'da\'d2\'bb\'d6\'d6\'b7\'bd\'ca\'bd
+\f0 \cf0 \
+    [dict1 \cf7 setObject\cf0 :\cf4 @50.0\cf0   \cf7 forKey\cf0 :\cf5 @"weight"\cf0 ];\
+    \cf2 //      
+\f1 \'b5\'da\'b6\'fe\'d6\'d6\'b7\'bd\'ca\'bd
+\f0 \cf0 \
+    dict1[\cf5 @"sex"\cf0 ] = \cf5 @"
+\f1 \'c4\'d0
+\f0 "\cf0 ;\
+    \cf2 //      
+\f1 \'d0\'de\'b8\'c4
+\f0 \cf0 \
+    dict1[\cf5 @"age"\cf0 ] = \cf4 @30\cf0 ;\
+    \cf2 //       
+\f1 \'c9\'be\'b3\'fd
+\f0 \cf0 \
+    [dict1 \cf7 removeObjectForKey\cf0 :\cf5 @"age"\cf0 ];\
+    \cf2 //       
+\f1 \'c9\'be\'b3\'fd\'b6\'e0\'b8\'f6\'d4\'aa\'cb\'d8\'a3\'ac\'ca\'fd\'d7\'e9\'d6\'d0\'b4\'e6\'b4\'a2\'ca\'c7\'c4\'e3\'d2\'aa\'c9\'be\'b3\'fd\'b5\'c4
+\f0 key\cf0 \
+    [dict1 \cf7 removeObjectsForKeys\cf0 :\cf4 @[\cf5 @"name"\cf0 ,\cf5 @"sex"\cf4 ]\cf0 ];\
+    \cf2 //       
+\f1 \'c7\'e5\'bf\'d5\'d7\'d6\'b5\'e4
+\f0 \cf0 \
+    [dict1 \cf7 removeAllObjects\cf0 ];\
+\
+\
+NSSet\
+
+\f1 \cf2 \'cc\'d8\'b5\'e3\'a3\'ba\'ce\'de\'d0\'f2\'a3\'ac\'d4\'aa\'cb\'d8\'b2\'bb\'bf\'c9\'d2\'d4\'d6\'d8\'b8\'b4\'a3\'ac\'bf\'c9\'d2\'d4\'d3\'c3\'bf\'ec\'cb\'d9\'c8\'a5\'b3\'fd\'ca\'fd\'d7\'e9\'d6\'d0\'b5\'c4\'d6\'d8\'b8\'b4\'d4\'aa\'cb\'d8\'a3\'ac\'d0\'a7\'c2\'ca\'b1\'c8\'ca\'fd\'d7\'e9\'d2\'aa\'b8\'df
+\f0 \
+    NSSet:
+\f1 \'cc\'d8\'b5\'e3\'a3\'ba\'b2\'bb\'bf\'c9\'d2\'d4\'b1\'e4\'a3\'ac\'d2\'bb\'be\'ad\'b4\'b4\'bd\'a8\'b2\'bb\'c4\'dc\'d4\'f6\'c9\'be\'b8\'c4
+\f0 \
+    NSMutableSet:
+\f1 \'bf\'c9\'d2\'d4\'d4\'f6\'c9\'be\'a3\'ac\'c3\'bb\'d3\'d0\'b8\'c4\
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0 \cf3 NSSet\cf0  *set = [\cf3 NSSet\cf0  \cf7 setWithObjects\cf0 :\cf4 @1\cf0 ,\cf4 @2\cf0 ,\cf4 @3\cf0 ,\cf4 @4\cf0 ,\cf4 @1\cf0 ,\cf6 nil\cf0 ];\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //      
+\f1 \'b4\'b4\'bd\'a8
+\f0 \cf0 \
+\cf2 //      NSMutableSet *setM = [NSMutableSet set];\cf0 \
+        \cf3 NSMutableSet\cf0  *setM = [\cf3 NSMutableSet\cf0  \cf7 setWithCapacity\cf0 :\cf4 10\cf0 ];\
+        setM.\cf7 set\cf0  = set;\
+\cf2 //      
+\f1 \'cc\'ed\'bc\'d3\'d4\'aa\'cb\'d8
+\f0 \cf0 \
+        [setM \cf7 addObject\cf0 :\cf4 @10\cf0 ];\
+\cf2 //       
+\f1 \'c9\'be\'b3\'fd\'d4\'aa\'cb\'d8
+\f0 \cf0 \
+        [setM \cf7 removeObject\cf0 :\cf4 @1\cf0 ];\
+\cf2 //      
+\f1 \'c9\'be\'b3\'fd\'cb\'f9\'d3\'d0\'d4\'aa\'cb\'d8
+\f0 \cf0 \
+        [setM \cf7 removeAllObjects\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,setM);\
+\pard\tx674\pardeftab674\pardirnatural
+
+\f1 \cf0 \'bc\'af\'ba\'cf\'d6\'d0\'b5\'c4\'c4\'da\'b4\'e6\'b9\'dc\'c0\'ed
+\f0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf2  MRC
+\f1 \'a3\'ba\'ca\'d6\'b6\'af\'c4\'da\'b4\'e6\'b9\'dc\'c0\'ed
+\f0 \
+  
+\f1 \'b5\'b1\'c4\'e3\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'bd\'bc\'af\'ba\'cf\'a3\'ac\'bc\'af\'ba\'cf\'be\'cd\'bb\'e1\'b6\'d4\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0\'d2\'bb\'b4\'ce
+\f0 retain
+\f1 \'b5\'c4\'b2\'d9\'d7\'f7
+\f0 \
+  
+\f1 \'b5\'b1\'c4\'e3\'b4\'d3\'bc\'af\'ba\'cf\'d6\'d0\'c9\'be\'b3\'fd\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'bc\'af\'ba\'cf\'be\'cd\'bb\'e1\'b6\'d4\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0\'d2\'bb\'b4\'ce
+\f0 release
+\f1 \'b5\'c4\'b2\'d9\'d7\'f7
+\f0 \
+  
+\f1 \'b5\'b1\'bc\'af\'ba\'cf\'cf\'fa\'bb\'d9\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'bb\'e1\'b6\'d4\'bc\'af\'ba\'cf\'d6\'d0\'cb\'f9\'d3\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'bd\'f8\'d0\'d0\'d2\'bb\'b4\'ce
+\f0 release
+\f1 \'b2\'d9\'d7\'f7
+\f0 \
+ \
+ ARC 
+\f1 \'d7\'d4\'b6\'af\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd
+\f0 \
+ 
+\f1 \'b5\'b1\'c4\'e3\'b0\'d1\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'cc\'ed\'bc\'d3\'bc\'af\'ba\'cf\'d6\'d0\'a1\'a3\'bc\'af\'ba\'cf\'be\'cd\'bb\'e1\'b6\'d4\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'d3\'d0\'d2\'bb\'b8\'f6\'c7\'bf\'d2\'fd\'d3\'c3
+\f0 (
+\f1 \'d6\'b8\'d5\'eb
+\f0 )\
+ 
+\f1 \'b5\'b1\'c4\'e3\'b4\'d3\'bc\'af\'ba\'cf\'d6\'d0\'c9\'be\'b3\'fd\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'bc\'af\'ba\'cf\'be\'cd\'bb\'e1\'ca\'cd\'b7\'c5\'b5\'f4\'b6\'d4\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'c7\'bf\'d2\'fd\'d3\'c3
+\f0 (
+\f1 \'d6\'b8\'d5\'eb
+\f0 )\
+ 
+\f1 \'b5\'b1\'ca\'fd\'d7\'e9\'cf\'fa\'bb\'d9\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'cb\'fc\'bb\'e1\'ca\'cd\'b7\'c5\'b5\'f7\'d3\'c3\'c6\'e4\'cb\'f9\'d3\'d0\'d4\'aa\'cb\'d8\'b5\'c4\'c7\'bf\'d2\'fd\'d3\'c3\
+\
+
+\f0 //  05-
+\f1 \'b3\'a3\'d3\'c3\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5
+\f0 \cf0 \
+\
+\cf2  1
+\f1 \'a1\'a2
+\f0 NSRange 
+\f1 \'c7\'f8\'bc\'e4
+\f0 \cf0 \
+        \
+        \cf3 NSRange\cf0  range;\
+\cf2 //        range.location  
+\f1 \'b1\'ed\'ca\'be\'bf\'aa\'ca\'bc\'b5\'c4\'ce\'bb\'d6\'c3
+\f0 \cf0 \
+\cf2 //        range.length 
+\f1 \'b1\'ed\'ca\'be\'b3\'a4\'b6\'c8
+\f0 \cf0 \
+\cf2 //      2
+\f1 \'a1\'a2
+\f0 NSPoint/CGPoint 
+\f1 \'ce\'bb\'d6\'c3
+\f0 \cf0 \
+\cf2 //        NSPoint\cf0 \
+        \cf3 CGPoint\cf0  point;\
+\cf2 //        point.x x
+\f1 \'d7\'f8\'b1\'ea
+\f0 \cf0 \
+\cf2 //        point.y y
+\f1 \'d7\'f8\'b1\'ea
+\f0 \cf0 \
+        point = \cf7 CGPointMake\cf0 (\cf4 10\cf0 , \cf4 10\cf0 );\
+        \
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,\cf7 NSStringFromPoint\cf0 (point));\
+        \
+        \
+\cf2 //      3
+\f1 \'a1\'a2
+\f0 NSSize/CGSize 
+\f1 \'b3\'df\'b4\'e7
+\f0 /
+\f1 \'b4\'f3\'d0\'a1
+\f0 \cf0 \
+        \cf3 CGSize\cf0  size;\
+\cf2 //        size.width  
+\f1 \'bf\'ed\'b6\'c8
+\f0 \cf0 \
+\cf2 //        size.height  
+\f1 \'b8\'df\'b6\'c8
+\f0 \cf0 \
+        size = \cf7 CGSizeMake\cf0 (\cf4 20\cf0 , \cf4 30\cf0 );\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,\cf7 NSStringFromSize\cf0 (size));\
+        \
+\cf2 //      4
+\f1 \'a1\'a2
+\f0 NSRect/CGRect 
+\f1 \'ce\'bb\'d6\'c3\'ba\'cd\'b4\'f3\'d0\'a1
+\f0 \cf0 \
+        \cf3 CGRect\cf0  rect;\
+\cf2 //        rect.origin  
+\f1 \'ce\'bb\'d6\'c3
+\f0 \cf0 \
+\cf2 //        rect.size    
+\f1 \'b4\'f3\'d0\'a1
+\f0 \cf0 \
+        rect  = \cf7 CGRectMake\cf0 (\cf4 10\cf0 , \cf4 10\cf0 , \cf4 20\cf0 , \cf4 30\cf0 );\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,\cf7 NSStringFromRect\cf0 (rect));\
+\
+\
+\cf2  
+\f1 \'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'b5\'c4\'b0\'fc\'d7\'b0\'c0\'e0
+\f0 NSNumber\
+   OC
+\f1 \'d6\'d0\'bc\'af\'ba\'cf\'c0\'e0\'d6\'d0\'d6\'bb\'c4\'dc\'b4\'e6\'b4\'a2
+\f0 OC
+\f1 \'b6\'d4\'cf\'f3\'b2\'bb\'c4\'dc\'b4\'e6\'b4\'a2\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd
+\f0 \
+  \
+   
+\f1 \'b4\'e6\'b4\'a2\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd
+\f0 \
+   
+\f1 \'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd
+\f0  -
+\f1 \'a1\'b7\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 (NSNumber) ->
+\f1 \'b4\'e6\'c8\'eb\'bc\'af\'ba\'cf\'c0\'e0
+\f0 \
+ \
+   
+\f1 \'b4\'d3\'bc\'af\'ba\'cf\'d6\'d0\'c8\'a1\'b3\'f6\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0  -
+\f1 \'a1\'b7\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 (NSNumber) -
+\f1 \'a1\'b7\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\
+\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'d7\'aa\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 \cf0 \
+        \cf3 NSNumber\cf0  *number = [\cf3 NSNumber\cf0  \cf7 numberWithInt\cf0 :\cf4 19\cf0 ];\
+        number = [\cf3 NSNumber\cf0  \cf7 numberWithFloat\cf0 :\cf4 10.1f\cf0 ];\
+        number = [\cf3 NSNumber\cf0  \cf7 numberWithDouble\cf0 :\cf4 10.10\cf0 ];\
+        number = [\cf3 NSNumber\cf0  \cf7 numberWithBool\cf0 :\cf6 YES\cf0 ];\
+\cf2 //      
+\f1 \'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd\'d7\'aa\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd
+\f0 \cf0 \
+       \cf6 int\cf0  i =  number.\cf3 intValue\cf0 ;\
+        number.\cf3 floatValue\cf0 ;\
+        number.\cf3 doubleValue\cf0 ;\
+        number.\cf3 boolValue\cf0 ;\
+\cf2 //      
+\f1 \'bf\'ec\'cb\'d9\'b4\'b4\'bd\'a8
+\f0 NSNumber
+\f1 \'b6\'d4\'cf\'f3
+\f0 \cf0 \
+        number = \cf4 @1\cf0 ;\
+        number = \cf4 @1.1\cf0 ;\
+        number = \cf4 @1.2f\cf0 ;\
+\
+\cf2  
+\f1 \'bd\'e1\'b9\'b9\'cc\'e5\'d7\'aa\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 NSValue\
+ OC
+\f1 \'d6\'d0\'bc\'af\'ba\'cf\'c0\'e0\'d6\'d0\'d6\'bb\'c4\'dc\'b4\'e6\'b4\'a2
+\f0 OC
+\f1 \'b6\'d4\'cf\'f3\'b2\'bb\'c4\'dc\'b4\'e6\'b4\'a2\'bb\'f9\'b1\'be\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'ba\'cd\'bd\'e1\'b9\'b9\'cc\'e5
+\f0 \
+ \
+ 
+\f1 \'b4\'e6\'b4\'a2\'bd\'e1\'b9\'b9\'cc\'e5
+\f0 \
+ 
+\f1 \'bd\'e1\'b9\'b9\'cc\'e5
+\f0  -
+\f1 \'a1\'b7\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 (NSValue) ->
+\f1 \'b4\'e6\'c8\'eb\'bc\'af\'ba\'cf\'c0\'e0
+\f0 \
+ \
+ 
+\f1 \'b4\'d3\'bc\'af\'ba\'cf\'d6\'d0\'c8\'a1\'b3\'f6\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0  -
+\f1 \'a1\'b7\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 (NSValue) -
+\f1 \'a1\'b7\'bd\'e1\'b9\'b9\'cc\'e5\
+\
+\'bd\'e1\'b9\'b9\'cc\'e5\'d7\'aa\'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd
+\f0 \cf0 \
+        \cf3 NSRange\cf0  range = \{\cf4 1\cf0 ,\cf4 20\cf0 \};\
+        \cf3 NSValue\cf0  *value = [\cf3 NSValue\cf0  \cf7 valueWithRange\cf0 :range];\
+        \cf3 CGPoint\cf0  point =  \cf7 CGPointMake\cf0 (\cf4 1.2\cf0 ,\cf4 10.2\cf0 );\
+        \cf3 NSValue\cf0  *value2 = [\cf3 NSValue\cf0  \cf7 valueWithPoint\cf0 :point];\
+        \cf3 CGSize\cf0  size  = \cf7 CGSizeMake\cf0 (\cf4 10\cf0 , \cf4 20\cf0 );\
+        \cf3 NSValue\cf0  *value3 = [\cf3 NSValue\cf0  \cf7 valueWithSize\cf0 :size];\
+        \cf3 CGRect\cf0  rect = \cf7 CGRectMake\cf0 (\cf4 10\cf0 , \cf4 10\cf0 , \cf4 20\cf0 , \cf4 20\cf0 );\
+        \cf3 NSValue\cf0  *value4 = [\cf3 NSValue\cf0  \cf7 valueWithRect\cf0 :rect];\
+\cf2 //      
+\f1 \'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5\'d7\'aa
+\f0 NSValue\cf0 \
+        \cf6 typedef\cf0  \cf6 struct\cf0  \{\
+            \cf6 int\cf0  year;\
+            \cf6 int\cf0  month;\
+            \cf6 int\cf0  day;\
+        \} CZDate;\
+        \
+        \cf8 CZDate\cf0  date = \{\cf4 2014\cf0 ,\cf4 12\cf0 ,\cf4 5\cf0 \};\
+        \
+        \cf3 NSValue\cf0  *value5 = [\cf3 NSValue\cf0  \cf7 valueWithBytes\cf0 :&date \cf7 objCType\cf0 :\cf6 @encode\cf0 (\cf8 CZDate\cf0 )];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,value5);\
+\cf2 //      
+\f1 \'b0\'fc\'d7\'b0\'c0\'e0\'d0\'cd\'d7\'aa\'bd\'e1\'b9\'b9\'cc\'e5
+\f0 \cf0 \
+        \cf8 CZDate\cf0  d1;\
+        \
+        \
+        [value5 \cf7 getValue\cf0 :&d1];\
+        \cf7 NSLog\cf0 (\cf5 @"%d,%d,%d"\cf0 ,d1.\cf8 year\cf0 ,d1.\cf8 month\cf0 ,d1.\cf8 day\cf0 );\
+        \
+        value4.\cf3 rectValue\cf0 ;\
+        value3.\cf3 sizeValue\cf0 ;\
+        value2.\cf3 pointerValue\cf0 ;\
+        value.\cf3 rangeValue\cf0 ;\
+\
+\
+\cf2 NSDate\
+\
+/NSCalendar 
+\f1 \'c8\'d5\'c0\'fa\'a3\'ac\'d6\'f7\'d2\'aa\'d3\'c3\'d3\'da\'c8\'d5\'c6\'da\'b5\'c4\'bc\'c6\'cb\'e3
+\f0 \cf0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf6 int\cf0  main(\cf6 int\cf0  argc, \cf6 const\cf0  \cf6 char\cf0  * argv[]) \{\
+    \cf6 @autoreleasepool\cf0  \{\
+        \
+        \cf3 NSCalendar\cf0  *calendar = [\cf3 NSCalendar\cf0  \cf7 currentCalendar\cf0 ];\
+\
+        \cf3 NSString\cf0  *ds = \cf5 @"2015-1-1 10:10:10"\cf0 ;\
+        \cf3 NSString\cf0  *ds1 = \cf5 @"2015-4-1 10:10:10"\cf0 ;\
+        \
+        \cf3 NSDateFormatter\cf0  *fmt = [[\cf3 NSDateFormatter\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+        fmt.\cf3 dateFormat\cf0  = \cf5 @"yyyy-MM-dd HH:mm:ss"\cf0 ;\
+        \cf2 //      
+\f1 \'bd\'ab\'d7\'d6\'b7\'fb\'d7\'aa\'c8\'d5\'c6\'da
+\f0 \cf0 \
+        \cf3 NSDate\cf0  *d1 = [fmt \cf7 dateFromString\cf0 :ds];\
+        \cf3 NSDate\cf0  *d2 = [fmt \cf7 dateFromString\cf0 :ds1];\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //      
+\f1 \'bc\'c6\'cb\'e3\'c1\'bd\'b8\'f6\'c8\'d5\'c6\'da\'b5\'c4\'b2\'ee\'d6\'b5
+\f0 \cf0 \
+        \cf3 NSDateComponents\cf0   *cmps  = [calendar \cf7 components\cf0 :\cf7 NSCalendarUnitMonth\cf0  \cf7 fromDate\cf0 :d1 \cf7 toDate\cf0 :d2 \cf7 options\cf0 :\cf7 NSCalendarMatchStrictly\cf0 ];\
+        \
+        \cf7 NSLog\cf0 (\cf5 @"%zd"\cf0 ,cmps.\cf3 month\cf0 );\
+        \
+\cf2 //     NSDateComponents 
+\f1 \'d7\'aa
+\f0  NSDate\cf0 \
+        cmps.\cf3 year\cf0   = \cf4 2014\cf0 ;\
+        cmps.\cf3 month\cf0  = \cf4 2\cf0 ;\
+        cmps.\cf3 day\cf0  = \cf4 30\cf0 ;\
+        cmps.\cf3 hour\cf0  = \cf4 10\cf0 ;\
+        cmps.\cf3 minute\cf0  = \cf4 10\cf0 ;\
+        cmps.\cf3 second\cf0  = \cf4 120\cf0 ;\
+        \cf3 NSDate\cf0  *date  =  [calendar \cf7 dateFromComponents\cf0 :cmps];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,date);\
+        \
+\cf2 //      
+\f1 \'b4\'d3\'b5\'b1\'c7\'b0\'c8\'d5\'c6\'da\'bc\'d3\'c9\'cf\'d2\'bb\'c4\'ea
+\f0 \cf0 \
+        \cf3 NSDateComponents\cf0  *cm = [[\cf3 NSDateComponents\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+        cm.\cf3 year\cf0  = \cf4 1\cf0 ;\
+        \cf3 NSDate\cf0  *date2  = [calendar \cf7 dateByAddingComponents\cf0 :cm \cf7 toDate\cf0 :date \cf7 options\cf0 :\cf7 NSCalendarMatchStrictly\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,date2);\
+        \
+    \}\
+    \cf6 return\cf0  \cf4 0\cf0 ;\
+\}\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf6 void\cf0  test3()\
+\{\
+    \cf3 NSCalendar\cf0  *calendar = [\cf3 NSCalendar\cf0  \cf7 currentCalendar\cf0 ];\
+    \
+    \cf2 //      
+\f1 \'bb\'f1\'c8\'a1\'c8\'d5\'c6\'da\'c3\'bf\'d2\'bb\'b8\'f6\'b2\'bf\'b7\'d6
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *date = [\cf3 NSDate\cf0  \cf7 date\cf0 ];\
+    \cf3 NSDateComponents\cf0   *cmps = [calendar \cf7 components\cf0 :\cf7 NSCalendarUnitYear\cf0 |\cf7 NSCalendarUnitMonth\cf0 |\cf7 NSCalendarUnitDay\cf0 |\cf7 NSCalendarUnitHour\cf0 |\cf7 NSCalendarUnitMinute\cf0 |\cf7 NSCalendarUnitSecond\cf0  \cf7 fromDate\cf0 :date];\
+    \
+    \cf6 long\cf0  year = cmps.\cf3 year\cf0 ;\
+    \cf7 NSLog\cf0 (\cf5 @"%zd,%zd,%zd,%zd,%zd,%zd"\cf0 ,year,cmps.\cf3 month\cf0 ,cmps.\cf3 day\cf0 ,cmps.\cf3 hour\cf0 ,cmps.\cf3 minute\cf0 ,cmps.\cf3 second\cf0 );\
+\}\
+\
+\
+\cf6 void\cf0  test2()\
+\{\
+    \cf3 NSString\cf0  *ds = \cf5 @"2015-1-1 10:10:10"\cf0 ;\
+    \cf3 NSString\cf0  *ds1 = \cf5 @"2015-4-1 10:10:10"\cf0 ;\
+    \cf3 NSDateFormatter\cf0  *fmt = [[\cf3 NSDateFormatter\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+    fmt.\cf3 dateFormat\cf0  = \cf5 @"yyyy-MM-dd HH:mm:ss"\cf0 ;\
+    \cf2 //      
+\f1 \'bd\'ab\'d7\'d6\'b7\'fb\'d7\'aa\'c8\'d5\'c6\'da
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *d1 = [fmt \cf7 dateFromString\cf0 :ds];\
+    \cf3 NSDate\cf0  *d2 = [fmt \cf7 dateFromString\cf0 :ds1];\
+    \
+    \cf6 BOOL\cf0  isSame = [d1 \cf7 isEqualToDate\cf0 :d2];\
+    \cf6 if\cf0  (!isSame) \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'c8\'d5\'c6\'da\'b2\'bb\'cd\'ac
+\f0 "\cf0 );\
+    \}\
+    \cf2 //      
+\f1 \'b1\'c8\'bd\'cf\'c1\'bd\'b8\'f6\'c8\'d5\'c6\'da
+\f0 \cf0 \
+    \cf3 NSComparisonResult\cf0  rs =  [d1 \cf7 compare\cf0 :d2];\
+    \cf6 if\cf0 (rs == \cf7 NSOrderedSame\cf0 )\{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'cf\'e0\'cd\'ac
+\f0 "\cf0 );\
+    \}\cf6 else\cf0  \cf6 if\cf0 (rs == \cf7 NSOrderedAscending\cf0 )\{\
+        \cf7 NSLog\cf0 (\cf5 @"d1 < d2"\cf0 );\
+    \}\cf6 else\cf0 \{\
+        \cf7 NSLog\cf0 (\cf5 @"d1 > d2"\cf0 );\
+    \}\
+    \
+    \cf2 //      
+\f1 \'bb\'f1\'c8\'a1\'c1\'bd\'b8\'f6\'c8\'d5\'c6\'da\'bd\'cf\'d4\'e7
+\f0 de
+\f1 \'d2\'bb\'b8\'f6
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *earlierDate =  [d1 \cf7 earlierDate\cf0 :d2 ];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,earlierDate);\
+    \cf2 //      
+\f1 \'bb\'f1\'c8\'a1\'c1\'bd\'b8\'f6\'c8\'d5\'c6\'da\'bd\'cf\'cd\'ed
+\f0 de
+\f1 \'d2\'bb\'b8\'f6
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *laterDate = [d1 \cf7 laterDate\cf0 :d2];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,laterDate);\
+    \
+    \cf6 int\cf0  second = \cf4 60\cf0  * \cf4 60\cf0  * \cf4 24\cf0 ;\
+    \cf2 //      
+\f1 \'b4\'d3\'b5\'b1\'c7\'b0\'ca\'b1\'bc\'e4\'cd\'f9\'ba\'f3\'b6\'e0\'c9\'d9\'c3\'eb\'b5\'c4\'ca\'b1\'bc\'e4
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *tm = [\cf3 NSDate\cf0  \cf7 dateWithTimeIntervalSinceNow\cf0 :second];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,tm);\
+\
+\}\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //
+\f1 \'d6\'d8\'b5\'e3
+\f0 \cf0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf6 void\cf0  test()\
+\{\
+    \cf2 //      
+\f1 \'b4\'b4\'bd\'a8
+\f0 NSDate\cf0 \
+    \cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b4\'fa\'b1\'ed\'b5\'b1\'c7\'b0\'ca\'b1\'bc\'e4\'b5\'c4\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *date = [\cf3 NSDate\cf0  \cf7 date\cf0 ];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,date); \cf2 //
+\f1 \'ca\'e4\'b3\'f6\'b5\'c4\'ca\'b1\'bc\'e4\'ca\'c7\'b8\'f1\'c1\'d6\'cd\'fe\'d6\'ce\'b1\'ea\'d7\'bc\'ca\'b1\'bc\'e4
+\f0   
+\f1 \'b1\'be\'b3\'f5\'d7\'d3\'ce\'e7\'cf\'df\'b4\'a9\'b9\'fd\'c4\'c4\'c0\'ef
+\f0 \cf0 \
+    \
+    \cf2 //      
+\f1 \'b8\'f1\'ca\'bd\'bb\'af
+\f0 \cf0 \
+    \cf2 //      
+\f1 \'b4\'b4\'bd\'a8\'c8\'d5\'c6\'da\'b8\'f1\'ca\'bd\'bb\'af\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+    \cf3 NSDateFormatter\cf0  *fmt = [[\cf3 NSDateFormatter\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+    fmt.\cf3 dateFormat\cf0  = \cf5 @"yyyy-MM-dd HH:mm:ss"\cf0 ;\
+    \cf2 /*\
+     yyyy 
+\f1 \'c4\'ea
+\f0 \
+     MM   
+\f1 \'d4\'c2
+\f0 \
+     dd   
+\f1 \'c8\'d5
+\f0 \
+     HH   24
+\f1 \'d0\'a1\'ca\'b1
+\f0 \
+     hh   12
+\f1 \'d0\'a1\'ca\'b1
+\f0 \
+     mm   
+\f1 \'b7\'d6\'d6\'d3
+\f0 \
+     ss   
+\f1 \'c3\'eb
+\f0 \
+     Z    
+\f1 \'ca\'b1\'c7\'f8
+\f0 \
+     */\cf0 \
+    \cf2 //      
+\f1 \'c8\'d5\'c6\'da\'d7\'aa\'b8\'f1\'ca\'bd\'bb\'af\'d7\'d6\'b7\'fb\'b4\'ae
+\f0 \cf0 \
+    \cf3 NSString\cf0  *dateStr  =  [fmt \cf7 stringFromDate\cf0 :date];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,dateStr);\
+    \cf3 NSString\cf0  *ds = \cf5 @"2015-1-1 10:10:10"\cf0 ;\
+    \cf2 //      
+\f1 \'d7\'d6\'b7\'fb\'d7\'aa\'c8\'d5\'c6\'da
+\f0 \cf0 \
+    \cf3 NSDate\cf0  *d1 = [fmt \cf7 dateFromString\cf0 :ds];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,d1);\
+	\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 NSFileManager  
+\f1 \'b5\'a5\'c0\'fd\'b6\'d4\'cf\'f3\
+\
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0 \cf0  \cf2 //     
+\f1 \'bb\'f1\'c8\'a1
+\f0 NSFileManager
+\f1 \'b5\'a5\'c0\'fd\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+       \cf3 NSFileManager\cf0  *fm = [\cf3 NSFileManager\cf0  \cf7 defaultManager\cf0 ];\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'c4\'bf\'c2\'bc
+\f0 /Users/apple/Desktop/hhh\cf0 \
+       \cf3 NSString\cf0  *path = \cf5 @"/Users/apple/Desktop/dir/test"\cf0 ;\
+\cf2 //     withIntermediateDirectories 
+\f1 \'d6\'d0\'bc\'e4\'c4\'bf\'c2\'bc\'d2\'aa\'b2\'bb\'d2\'aa\'b4\'b4\'bd\'a8
+\f0 \cf0 \
+        \cf3 NSError\cf0  *error = \cf6 nil\cf0 ;\
+\cf2 //     
+\f1 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d6\'bb\'c4\'dc\'b4\'b4\'bd\'a8\'ce\'c4\'bc\'fe\'c4\'bf\'c2\'bc
+\f0 (
+\f1 \'ce\'c4\'bc\'fe\'bc\'d0
+\f0 )\cf0 \
+       \cf6 BOOL\cf0  isSuccess =  [fm \cf7 createDirectoryAtPath\cf0 :path \cf7 withIntermediateDirectories\cf0 :\cf6 YES\cf0  \cf7 attributes\cf0 :\cf6 nil\cf0  \cf7 error\cf0 :&error];\
+        \cf6 if\cf0  (isSuccess) \{\
+            \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'b4\'b4\'bd\'a8\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+        \}\cf6 else\cf0 \{\
+            \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,error);\
+        \}\
+        \
+        path = \cf5 @"/Users/apple/Desktop/dir/test/abc.txt"\cf0 ;\
+\cf2 //     
+\f1 \'b4\'b4\'bd\'a8\'ce\'c4\'bc\'fe
+\f0 \cf0 \
+        \cf3 NSString\cf0  *str = \cf5 @"
+\f1 \'bd\'f1\'cc\'ec
+\f0 OC
+\f1 \'d7\'ee\'ba\'f3\'d2\'bb\'cc\'ec\'a3\'a1
+\f0 "\cf0 ;\
+\cf2 //      NSData OC
+\f1 \'d6\'d0\'d3\'c3\'d3\'da\'b1\'a3\'b4\'e6\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd\'b5\'c4\'a3\'ac\'b6\'d4\'d3\'a6\'cd\'bc\'c6\'ac\'a1\'a2\'ca\'d3\'c6\'b5\'d5\'e2\'d0\'a9\'c0\'e0\'d0\'cd\'b5\'c4\'ce\'c4\'bc\'fe\'d6\'bb\'c4\'dc\'ca\'b9\'d3\'c3
+\f0 NSData
+\f1 \'c0\'b4\'b1\'a3\'b4\'e6
+\f0 \cf0 \
+         \cf3 NSData\cf0  *data  =  [str \cf7 dataUsingEncoding\cf0 :\cf7 NSUTF8StringEncoding\cf0 ];\
+        isSuccess = [fm \cf7 createFileAtPath\cf0 :path \cf7 contents\cf0 :data \cf7 attributes\cf0 :\cf6 nil\cf0 ];\
+        \cf6 if\cf0  (isSuccess) \{\
+            \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'ce\'c4\'bc\'fe\'b4\'b4\'bd\'a8\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+\
+\cf2 //     
+\f1 \'bb\'f1\'c8\'a1
+\f0 NSFileManager
+\f1 \'b5\'a5\'c0\'fd\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+    \cf3 NSFileManager\cf0  *fm = [\cf3 NSFileManager\cf0  \cf7 defaultManager\cf0 ];\
+    \
+    \cf3 NSString\cf0  *path = \cf5 @"/Users/apple/Desktop/OC
+\f1 \'d7\'dc\'bd\'e1
+\f0 .m"\cf0 ;\
+    \cf2 //     
+\f1 \'bc\'b4\'bf\'c9\'c5\'d0\'b6\'cf\'ce\'c4\'bc\'fe\'d2\'b2\'bf\'c9\'d2\'d4\'ca\'c7\'ce\'c4\'bc\'fe\'bc\'d0
+\f0 \cf0 \
+    \cf6 BOOL\cf0  isExists  = [fm \cf7 fileExistsAtPath\cf0 :path];\
+    \cf6 if\cf0 (isExists)\{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'b4\'e6\'d4\'da
+\f0 "\cf0 );\
+    \}\
+    \
+    \cf6 BOOL\cf0  isDir = \cf6 NO\cf0 ;\cf2 //
+\f1 \'ca\'c7\'b7\'f1\'ce\'aa\'ce\'c4\'bc\'fe\'bc\'d0
+\f0 \cf0 \
+    isExists  = [fm \cf7 fileExistsAtPath\cf0 :path \cf7 isDirectory\cf0 :&isDir];\
+    \cf2 //      
+\f1 \'d6\'bb\'d3\'d0\'b4\'e6\'d4\'da
+\f0 isDir
+\f1 \'b2\'c5\'d3\'d0\'d2\'e2\'d2\'e5
+\f0 \cf0 \
+    \cf6 if\cf0 (isExists)\{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'b4\'e6\'d4\'da
+\f0  ,%d"\cf0 ,isDir);\
+    \}\cf6 else\cf0 \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'b2\'bb\'b4\'e6\'d4\'da
+\f0  ,%d"\cf0 ,isDir);\
+    \}\
+    \cf2 //      
+\f1 \'c5\'d0\'b6\'cf\'ce\'c4\'bc\'fe\'c8\'a8\'cf\'de
+\f0 \cf0 \
+    \cf2 //      
+\f1 \'c5\'d0\'b6\'cf\'ce\'c4\'bc\'fe\'ca\'c7\'b7\'f1\'bf\'c9\'b6\'c1
+\f0 \cf0 \
+    \cf6 BOOL\cf0  isReadable = [fm \cf7 isReadableFileAtPath\cf0 :path];\
+    \cf7 NSLog\cf0 (\cf5 @"%d"\cf0 ,isReadable);\
+    \cf2 //     
+\f1 \'c5\'d0\'b6\'cf\'ce\'c4\'bc\'fe\'ca\'c7\'b7\'f1\'bf\'c9\'d0\'b4
+\f0 \cf0 \
+    \cf6 BOOL\cf0  isWritable = [fm \cf7 isWritableFileAtPath\cf0 :path];\
+    \cf7 NSLog\cf0 (\cf5 @"%d"\cf0 ,isWritable);\
+    \cf3 NSError\cf0  *error = \cf6 nil\cf0 ;\
+    \cf2 //     
+\f1 \'bb\'f1\'c8\'a1\'ce\'c4\'bc\'fe\'bb\'f2\'c4\'bf\'c2\'bc\'b5\'c4\'ca\'f4\'d0\'d4
+\f0 \cf0 \
+    \cf3 NSDictionary\cf0  *attr = [fm \cf7 attributesOfItemAtPath\cf0 :path \cf7 error\cf0 :&error];\
+    \cf6 if\cf0  (!error) \{\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,attr);\
+    \}\
+    \cf2 //      
+\f1 \'bb\'f1\'c8\'a1\'ce\'c4\'bc\'fe\'bb\'f2\'ce\'c4\'bc\'fe\'bc\'d0\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \cf0 \
+    \cf3 NSNumber\cf0  *size = attr[\cf5 @"NSFileSize"\cf0 ];\
+    size = attr[\cf3 NSFileSize\cf0 ];\
+    \cf7 NSLog\cf0 (\cf5 @"szie = %@"\cf0 ,size);\
+    \cf3 NSDate\cf0  *date  = attr[\cf3 NSFileModificationDate\cf0 ];\
+    \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,date);\
+    \
+    \cf2 //      
+\f1 \'bf\'bd\'b1\'b4\'ce\'c4\'bc\'fe
+\f0  
+\f1 \'b8\'b4\'d6\'c6\'ce\'c4\'bc\'fe
+\f0 (
+\f1 \'bf\'c9\'d2\'d4\'ca\'c7\'ce\'c4\'bc\'fe\'d2\'b2\'bf\'c9\'ca\'c7\'ce\'c4\'bc\'fe\'bc\'d0
+\f0 )\cf0 \
+    \cf3 NSString\cf0  *dest = \cf5 @"/Users/apple/Desktop/test.m"\cf0 ;\
+    \
+    \cf6 BOOL\cf0  isSuccess = [fm \cf7 copyItemAtPath\cf0 :path \cf7 toPath\cf0 :dest \cf7 error\cf0 :&error];\
+    \cf6 if\cf0  (isSuccess) \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'bf\'bd\'b1\'b4\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+    \}\
+    \cf3 NSString\cf0  *moveTo = \cf5 @"/Users/apple/Desktop/testMove/test.m"\cf0 ;\
+    \cf2 //     
+\f1 \'d2\'c6\'b6\'af\'ce\'c4\'bc\'fe
+\f0 /
+\f1 \'bc\'f4\'c7\'d0
+\f0 \cf0 \
+    isSuccess =  [fm \cf7 moveItemAtPath\cf0 :path \cf7 toPath\cf0 :moveTo \cf7 error\cf0 :&error];\
+    \cf6 if\cf0  (isSuccess) \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'d2\'c6\'b6\'af\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+\
+\
+NSData\
+\cf2  
+\f1 \'b8\'c5\'c4\'ee\'a3\'ba
+\f0 \'a0IOS
+\f1 \'d6\'d0\'b6\'fe\'bd\'f8\'d6\'c6\'ce\'c4\'bc\'fe\'ca\'b9\'d3\'c3
+\f0 NSData
+\f1 \'b1\'a3\'b4\'e6
+\f0 \
+ 
+\f1 \'d2\'f4\'c6\'b5\'a1\'a2\'ca\'d3\'c6\'b5\'ce\'c4\'bc\'fe\'b1\'d8\'d0\'eb\'ca\'b9\'d3\'c3
+\f0 NSData
+\f1 \'c0\'b4\'b1\'a3\'b4\'e6\
+\'b6\'c1\'c8\'a1\'ce\'c4\'bc\'fe
+\f0 \cf0 \
+        \cf3 NSMutableData\cf0  *dataM = [\cf3 NSMutableData\cf0  \cf7 data\cf0 ];\
+        \cf3 NSData\cf0  *d1 = [\cf5 @"today is "\cf0  \cf7 dataUsingEncoding\cf0 :\cf7 NSUTF8StringEncoding\cf0 ];\
+        \cf3 NSData\cf0  *d2 = [\cf5 @"a good day "\cf0  \cf7 dataUsingEncoding\cf0 :\cf7 NSUTF8StringEncoding\cf0 ];\
+\cf2 //      
+\f1 \'cc\'ed\'bc\'d3\'ca\'fd\'be\'dd
+\f0 \cf0 \
+        [dataM \cf7 appendData\cf0 :d1];\
+        [dataM \cf7 appendData\cf0 :d2];\
+\cf2 //      
+\f1 \'b0\'d1
+\f0 NSData
+\f1 \'d7\'aa\'bb\'bb\'ce\'aa
+\f0 NSString\cf0 \
+        \cf3 NSString\cf0  *string  =  [[\cf3 NSString\cf0  \cf7 alloc\cf0 ] \cf7 initWithData\cf0 :dataM \cf7 encoding\cf0 :\cf7 NSUTF8StringEncoding\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,string);\
+\
+\cf2 //      
+\f1 \'b6\'c1\'c8\'a1\'ce\'c4\'bc\'fe
+\f0 \cf0 \
+    \cf3 NSData\cf0  *data = [\cf3 NSData\cf0  \cf7 dataWithContentsOfFile\cf0 :\cf5 @"/Users/apple/Desktop/Snip20141111_21.png"\cf0 ];\
+    \cf7 NSLog\cf0 (\cf5 @"%zd"\cf0 ,data.\cf3 length\cf0 );\
+    \cf2 //      
+\f1 \'ca\'fd\'be\'dd\'d0\'b4\'c8\'eb\'ce\'c4\'bc\'fe
+\f0 \cf0 \
+    \cf6 BOOL\cf0  isSuccess = [data \cf7 writeToFile\cf0 :\cf5 @"/Users/apple/Desktop/dir/test.png"\cf0  \cf7 atomically\cf0 :\cf6 YES\cf0 ];\
+    \cf6 if\cf0  (isSuccess) \{\
+        \cf7 NSLog\cf0 (\cf5 @"
+\f1 \'d0\'b4\'c8\'eb\'b3\'c9\'b9\'a6\'a3\'a1
+\f0 "\cf0 );\
+\
+\
+
+\f1 \cf2 \'b8\'b4\'d6\'c6\
+\
+
+\f0 1
+\f1 \'a1\'a2\'c7\'b3\'b8\'b4\'d6\'c6\'a3\'ba\'b2\'bb\'bb\'e1\'b2\'fa\'c9\'fa\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3\'b5\'c4\'b8\'b4\'d6\'c6
+\f0 \
+  2
+\f1 \'a1\'a2\'c9\'ee\'b8\'b4\'d6\'c6\'a3\'ba\'bb\'e1\'b2\'fa\'c9\'fa\'d2\'bb\'b8\'f6\'c8\'ab\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3
+\f0 \
+  Mutable 
+\f1 \'b1\'ed\'ca\'be\'bf\'c9\'b1\'e4\'b5\'c4
+\f0 \
+ \
+ \
+  
+\f1 \'b8\'b4\'d6\'c6\'b5\'c4\'c4\'bf\'b5\'c4\'a3\'ba\'be\'cd\'b8\'c4\'b1\'e4\'b8\'b4\'d6\'c6\'b6\'d4\'cf\'f3\'b2\'bb\'bb\'e1\'d3\'b0\'cf\'ec\'d4\'ad\'b6\'d4\'cf\'f3\'a3\'ac
+\f0 \
+  
+\f1 \'b6\'d4\'cb\'f9\'d3\'d0\'b5\'c4\'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 copy
+\f1 \'b2\'d9\'d7\'f7\'b6\'bc\'ca\'c7\'c7\'b3\'b8\'b4\'d6\'c6
+\f0 \
+  
+\f1 \'b6\'d4\'cb\'f9\'d3\'d0\'b5\'c4\'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 mutableCopy
+\f1 \'b2\'d9\'d7\'f7\'b6\'bc\'ca\'c7\'c9\'ee\'b8\'b4\'d6\'c6
+\f0 \
+  
+\f1 \'b6\'d4\'d3\'da\'bf\'c9\'b1\'e4\'b5\'c3\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 copy
+\f1 \'bb\'f2
+\f0  mutableCopy
+\f1 \'b2\'d9\'d7\'f7\'a3\'ac\'bb\'e1\'b2\'fa\'c9\'fa\'d2\'bb\'b8\'f6\'c8\'ab\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3
+\f0 \
+ \
+  
+\f1 \'bd\'f8\'d0\'d0
+\f0 copy
+\f1 \'b2\'d9\'d7\'f7\'b7\'b5\'bb\'d8\'b6\'bc\'ca\'c7\'d2\'bb\'b8\'f6\'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c4\'b6\'d4\'cf\'f3
+\f0 \
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf3 NSString\cf0  *str = [\cf3 NSString\cf0  \cf7 stringWithFormat\cf0 :\cf5 @"abc"\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,str);\
+\pard\tx674\pardeftab674\pardirnatural
+\cf2 //      
+\f1 \'b8\'b4\'d6\'c6\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+        \cf3 NSMutableString\cf0  *str2  = [str \cf7 mutableCopy\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,str2);\
+\cf2 //      
+\f1 \'d5\'e2\'c0\'ef\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6
+\f0 NSString\cf0 \
+        \cf3 NSString\cf0  *str3  = [str2 \cf7 copy\cf0 ];\
+\cf2 //        [str3 insertString:@"a" atIndex:1];\cf0 \
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,str3);\
+        \cf3 NSString\cf0  *str4  = [str2 \cf7 mutableCopy\cf0 ];\
+        \cf2 //        [str3 insertString:@"a" atIndex:1];\cf0 \
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,str4);\
+        \cf7 NSLog\cf0 (\cf5 @"***************************"\cf0 );\
+\cf2 //      
+\f1 \'ca\'fd\'d7\'e9\'b5\'c4\'b8\'b4\'d6\'c6
+\f0 \cf0 \
+        \cf3 NSArray\cf0  *array = [\cf3 NSArray\cf0  \cf7 arrayWithObjects\cf0 :\cf4 @1\cf0 ,\cf4 @2\cf0 ,\cf4 @3\cf0 , \cf6 nil\cf0 ];\
+        \cf3 NSMutableArray\cf0  *newArray = [array \cf7 mutableCopy\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,array);\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,newArray);\
+        \cf3 NSArray\cf0  *array2 = [newArray \cf7 copy\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,array2);\
+        \cf3 NSArray\cf0  *array3 = [newArray \cf7 mutableCopy\cf0 ];\
+        \cf7 NSLog\cf0 (\cf5 @"%p"\cf0 ,array3);\
+\cf2 //    
+\f1 \'d7\'a2\'d2\'e2\'d5\'e2\'c0\'ef\'b8\'b4\'d6\'c6\'ca\'c7\'b6\'d4\'cf\'f3\'b5\'c4\'d6\'b8\'d5\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'b2\'fa\'c9\'fa\'d0\'c2\'b5\'c4\'b9\'b7\'b6\'d4\'cf\'f3
+\f0 \cf0 \
+        \cf8 CZDog\cf0  *dog = [[\cf8 CZDog\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+        dog.\cf8 name\cf0  = \cf5 @"bad"\cf0 ;\
+        \cf3 NSArray\cf0  *array4 = [\cf3 NSArray\cf0  \cf7 arrayWithObject\cf0 :dog];\
+        \cf3 NSMutableArray\cf0  *arrayM = [array4 \cf7 mutableCopy\cf0 ];\
+        \cf8 CZDog\cf0  *dog1  =  arrayM[\cf4 0\cf0 ];\
+        dog1.\cf8 name\cf0  = \cf5 @"good"\cf0 ;\
+        \cf7 NSLog\cf0 (\cf5 @"%@"\cf0 ,dog.\cf8 name\cf0 );\
+        \
+        \cf8 CZDog\cf0  *dog3 = [[\cf8 CZDog\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+        dog3.\cf8 name\cf0  = \cf5 @"apple"\cf0 ;\
+        [arrayM \cf7 addObject\cf0 :dog3];\
+        \cf7 NSLog\cf0 (\cf5 @"%zd"\cf0 ,arrayM.\cf3 count\cf0 );\
+        \cf7 NSLog\cf0 (\cf5 @"%zd"\cf0 ,array4.\cf3 count\cf0 );\
+\
+\
+
+\f1 \cf2 \'b2\'bb\'bf\'c9\'b1\'e4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 copy
+\f1 \'b2\'d9\'d7\'f7\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'cb\'fc\'b5\'c4\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd\'c6\'f7
+\f0 +1(NSString
+\f1 \'b3\'fd\'cd\'e2
+\f0 )\
+   
+\f1 \'b2\'bb\'bf\'c9\'b1\'e4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 mutableCopy
+\f1 \'b2\'d9\'d7\'f7\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'cb\'fc\'bb\'e1\'b2\'fa\'d2\'bb\'b8\'f6\'d0\'c2\'b6\'d4\'cf\'f3\'a3\'ac\'d0\'c2\'b6\'d4\'cf\'f3\'b5\'c4\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd\'ca\'c7
+\f0 1
+\f1 \'a3\'ac\'d4\'ad\'c0\'b4\'b5\'c4\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd\'b2\'bb\'b1\'e4
+\f0 \
+ \
+   
+\f1 \'bf\'c9\'b1\'e4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0
+\f0 copy 
+\f1 \'bb\'f2
+\f0  mutableCopy
+\f1 \'b6\'bc\'bb\'e1\'b2\'fa\'c9\'fa\'d2\'bb\'b8\'f6\'c8\'ab\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'ac\'d4\'ad\'b5\'c4\'b6\'d4\'cf\'f3\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd\'b2\'bb\'b1\'e4\'a3\'ac\'d0\'c2\'b6\'d4\'cf\'f3\'d2\'fd\'d3\'c3\'bc\'c6\'ca\'fd\'ce\'aa
+\f0 1}

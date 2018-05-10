@@ -1,0 +1,29 @@
+
+self.title = @"For iOS 6 & later";
+
+NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"Using NSAttributed String"];
+
+[str addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,5)];
+
+[str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(6,12)];
+
+[str addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(19,6)];
+
+[str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Arial-BoldItalicMT" size:30.0] range:NSMakeRange(0, 5)];
+
+[str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:30.0] range:NSMakeRange(6, 12)];
+
+[str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Courier-BoldOblique" size:30.0] range:NSMakeRange(19, 6)];
+
+attrLabel.attributedText = str;
+
+设置第几位起不同色
+
+    _remark1Label = [Utility customLabel:CGRectMake(48 * SCREENRATE, 232 * SCREENRATE, 224 * SCREENRATE, 11 * SCREENRATE) title:[NSString stringWithFormat:@"WiFi模块固件版本号为%@及其以下版本",_versionsnumber] fontSize:12*SCREENRATE textColor:UIColorFromRGB(0x8A8A8A) backgroundColor:[UIColor clearColor]];
+    _remark1Label.textAlignment = NSTextAlignmentCenter;
+    NSMutableAttributedString *noteStr = [[NSMutableAttributedString alloc] initWithString:_remark1Label.text];
+    NSRange Range = NSMakeRange(12,_versionsnumber.length);
+    [noteStr addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x41d990) range:Range];
+    [_remark1Label setAttributedText:noteStr] ;
+    
+    [self.view addSubview:_remark1Label];
