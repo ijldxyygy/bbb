@@ -1,0 +1,5 @@
+
+<key>NSAppTransportSecurity</key><dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/></dict>
+xcode7 http明文不用能和要用https 把上面三行加入INFO.PLIST中
