@@ -49,7 +49,7 @@
     // 自定义tabBar
     LWTabBar *tabBar = [[LWTabBar alloc] initWithFrame:self.tabBar.bounds];
     //修改底色
-    tabBar.backgroundColor = [UIColor greenColor];
+    tabBar.backgroundColor = [UIColor whiteColor];
     
     // 设置代理
     tabBar.delegate = self;
