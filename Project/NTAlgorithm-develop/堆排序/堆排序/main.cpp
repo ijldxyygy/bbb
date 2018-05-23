@@ -41,6 +41,6 @@ int* heapSort(int *A, int n) {
 }
 
 int main(int argc, const char * argv[]) {
-//    heapSort([0,4,3,23,23,554,223], 9);
+    heapSort([1,4,3,23,23,554,223], 9);
     return 0;
 }
